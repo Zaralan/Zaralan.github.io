@@ -82,6 +82,22 @@ margin-top: -10px;}
 	margin: 0px;
 	text-align: center;
 	font-size: 1.6em;}
+	#logoWithText {float: none;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	background-color: rgba(0,0,0,0.7);}
+	header img {margin-left: auto;
+	margin-right: auto;
+	display: block;}
+	#logoWithText h1 {padding-bottom: 10px;}
+}
+
+@media screen and (max-width: 600px){
+	header h2 {padding: 0px;
+	margin: 0px;
+	text-align: center;
+	font-size: 1.6em;}
 	header nav ul {padding-top: 5px;
 	padding-bottom: 5px;
 	width: 100%;
