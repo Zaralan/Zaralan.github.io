@@ -41,7 +41,7 @@ header ul li a:link, header ul li a:visited {color: #F2EAD2;}
 
 header ul li a:hover, header ul li a:active {color: #71CB21}
 
-header ul {list-style: none;
+header nav ul {list-style: none;
 text-align: center;
 font-size: 1.5em;
 clear: both;
@@ -51,7 +51,7 @@ padding-left: 0px;
 padding-right: 0px;
 background-color: rgba(0,0,0,0.7);}
 
-header ul li {display: inline-block;
+header nav ul li {display: inline-block;
 padding-right: 10px;
 padding-left: 10px;}
 
@@ -77,17 +77,17 @@ margin-top: -10px;}
 	#container {width: 100%;}
 }
 
-@media screen and (max-width: 770px){
+@media screen and (max-width: 800px){
 	header h2 {padding: 0px;
 	margin: 0px;
 	text-align: center;
-	font-size: 1.5em;}
-	header ul {padding-top: 10px;
-	padding-bottom: 10px;
+	font-size: 1.6em;}
+	header nav ul {padding-top: 5px;
+	padding-bottom: 5px;
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;}
-	header ul li {display: block;
+	header nav ul li {display: block;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-left: 0px;
@@ -101,4 +101,5 @@ margin-top: -10px;}
 	header img {margin-left: auto;
 	margin-right: auto;
 	display: block;}
+	#logoWithText h1 {padding-bottom: 10px;}
 }
