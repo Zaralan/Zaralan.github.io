@@ -124,7 +124,7 @@ clear: both;}
 #mainSlider {display: block;
 margin: 0px auto;
 width: 100%;
-height: 400px;
+height: 600px;
 border: none;}
 
 footer {border-top: 1px solid black;
@@ -182,7 +182,8 @@ footer ul li {display: inline-block;}
 	margin-right: auto;
 	padding-top: 2px;
 	padding-bottom: 3px;}
-	#mainSlider {width: 95%;}
+	#mainSlider {width: 100%;
+	height: 400px;}
 	#PC {display: none;}
 	#Mobile {display: block;}
 	#mainContent {width: 100%;}
