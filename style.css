@@ -173,7 +173,9 @@ footer ul li {display: inline-block;}
 	display: block;}
 	#mainPage h1 {text-align: center;}
 	#mainPage ul {text-align: center;
-	font-size: 1.3em;}
+	font-size: 1.3em;
+	padding: 0px;
+	list-style: none;}
 	#mainPage ul li {display: block;
 	margin-left: auto;
 	margin-right: auto;
