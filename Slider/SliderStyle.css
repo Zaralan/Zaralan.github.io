@@ -1,15 +1,17 @@
+html {height: 100%;
+width: 100%;
+margin: 0px;}
+
 body {margin: 0px;
 width: 100%;
 height: 100%;
 line-height: 0px;
 font-family: arial, sans-serif;
 font-size: 90px;
-overflow: hidden;}
-
-div {background-image: url("../Assets/Images/Background.jpeg");
+overflow: hidden;
+background-image: url("../Assets/Images/Background.jpeg");
 background-size: cover;
-background-position: center;
-height: 400px;}
+background-position: center;}
 
 a:link, a:visited {color: rgba(255,255,255,0.3);
 text-decoration: none;
