@@ -105,6 +105,27 @@ font-size: 2.5em;}
 
 #actionPage h3 {padding-bottom: 20px;}
 
+#mainPage h2 {color: #C935F2;}
+
+#mainImage {float: right;
+margin-left: 40px;
+margin-right: 10px;
+width: 350px;}
+
+#Mobile {display: none;}
+
+#mainContent {margin-bottom: 20px;
+width: 920px;}
+
+#mainContent:after {content: "";
+display: table;
+clear: both;}
+
+#mainSlider {display: block;
+margin: 0px auto;
+width: 760px;
+height: 400px;}
+
 footer {border-top: 1px solid black;
 background-color: rgba(0,0,0,0.5);
 padding: 0px;
@@ -124,6 +145,7 @@ footer ul li {display: inline-block;}
 
 @media screen and (max-width: 1280px){
 	#container {width: 100%;}
+	#mainContent {width: 60%;}
 }
 
 @media screen and (max-width: 800px){
@@ -145,6 +167,23 @@ footer ul li {display: inline-block;}
 	#footerSlash {display: none;}
 	footer ul li {display: block;
 	padding-bottom: 5px;}
+	#mainImage {float: none;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;}
+	#mainPage h1 {text-align: center;}
+	#mainPage ul {text-align: center;
+	font-size: 1.3em;}
+	#mainPage ul li {display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 2px;
+	padding-bottom: 3px;}
+	#mainSlider {width: 95%;}
+	#PC {display: none;}
+	#Mobile {display: block;}
+	#mainContent {width: 100%;}
+	
 }
 
 @media screen and (max-width: 600px){
