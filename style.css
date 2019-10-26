@@ -83,6 +83,8 @@ font-size: 0.8em;}
 
 main {margin: 10px;}
 
+.Mobile {display: none;}
+
 #formPage legend {margin-bottom: 0px;
 padding-bottom: 0px;
 text-align: center;
@@ -111,8 +113,6 @@ margin-left: 40px;
 margin-right: 10px;
 width: 350px;}
 
-#Mobile {display: none;}
-
 #mainContent {margin-bottom: 20px;
 width: 920px;}
 
@@ -124,7 +124,34 @@ clear: both;}
 margin: 0px auto;
 width: 100%;
 height: 600px;
-border: none;}
+padding: 0px;
+border: 1px #48734F solid;
+background-color: rgba(0,0,0,0.5);}
+
+#talentsImage {float: right;
+display: inline-block;
+width: 600px;
+text-align: center;
+margin-left: 30px;
+padding: 10px;
+border: 1px #48734F solid;
+background-color: rgba(0,0,0,0.5);}
+
+#glyphsImage {display: inline-block;
+float: right;
+text-align: center;
+background-color: rgba(0,0,0,0.5);
+padding: 10px;
+border: 1px #48734F solid;
+margin-left: 30px;
+width: 300px;}
+
+#talentsPage ul, #talentsPage ol {padding-left: 20px;}
+
+#talentsPage ul li, #talentsPage ol li {margin-bottom: 10px;}
+
+#talentsPage #glyphs ul {list-style: none;
+padding-left: 0px;}
 
 footer {border-top: 1px solid black;
 background-color: rgba(0,0,0,0.5);
@@ -183,9 +210,18 @@ footer ul li {display: inline-block;}
 	padding-bottom: 3px;}
 	#mainSlider {width: 100%;
 	height: 400px;}
-	#PC {display: none;}
-	#Mobile {display: block;}
+	#mainPage .PC {display: none;}
+	#mainPage .Mobile {display: block;}
 	#mainContent {width: 100%;}
+	#talentsImage {float: none;
+	display: block;
+	width: 550px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;}
+	#talentsImage img {width: 100%;}
+	#talents .Mobile {display: block;}
+	#talents .PC {display: none;}
 	
 }
 
@@ -216,4 +252,16 @@ footer ul li {display: inline-block;}
 	width: 138.75px;
 	height: 150px;}
 	#logoWithText h1 {padding-bottom: 10px;}
+	#talentsImage {width: 95%}
+	#talentsImage img {width: 100%;}
+	#glyphsImage {display: block;
+	float: none;
+	text-align: center;
+	background-color: rgba(0,0,0,0.5);
+	padding: 10px;
+	border: 1px #48734F solid;
+	margin-left: auto;
+	margin-right: auto;}
+	#glyphs .PC {display: none;}
+	#glyphs .Mobile {display: block;}
 }

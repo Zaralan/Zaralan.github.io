@@ -9,9 +9,19 @@ line-height: 0px;
 font-family: arial, sans-serif;
 font-size: 90px;
 overflow: hidden;
-background-image: url("./Images/WoWScrnShot_102219_144711.jpg");
 background-size: cover;
 background-position: center;}
+
+#Slider1 {background-image: url("./Images/WoWScrnShot_102319_194514.jpg");}
+
+#Slider2 {background-image: url("./Images/WoWScrnShot_102319_221240.jpg");
+background-position: left;}
+
+#Slider3 {background-image: url("./Images/WoWScrnShot_102319_225855.jpg");}
+
+#Slider4 {background-image: url("Images/WoWScrnShot_102319_233312.jpg");}
+
+#Slider5 {background-image: url("Images/WoWScrnShot_102319_230526.jpg");}
 
 a:link, a:visited {color: rgba(255,255,255,0.3);
 text-decoration: none;
