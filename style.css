@@ -40,7 +40,7 @@ font-size: 1.75em;}
 
 p {font-size: 1em;}
 
-q {font-family: times, times new roman, serif;}
+header q {font-family: times, times new roman, serif;}
 
 header {background-image: url("./Assets/Images/Background.jpeg"); /*this image was taken here: https://www.facebook.com/Warcraft/photos/a.10155694376974034/10155694377344034/?type=1&theater
 	
@@ -99,6 +99,10 @@ font-size: 0.8em;}
 
 main {margin: 10px;}
 
+section {padding: 10px;
+background-color: rgba(0,0,0,0.5);
+margin-top: 10px;}
+
 .Mobile {display: none;}
 
 #formPage legend {margin-bottom: 0px;
@@ -141,26 +145,22 @@ margin: 0px auto;
 width: 100%;
 height: 600px;
 padding: 0px;
-border: 1px #48734F solid;
+border: 1px #48734F ridge;
 background-color: rgba(0,0,0,0.5);}
 
-#talentsImage {float: right;
-display: inline-block;
-width: 600px;
+#talentsImage {display: block;
 text-align: center;
-margin-left: 30px;
+margin-left: auto;
+margin-right: auto;
 padding: 10px;
-border: 1px #48734F solid;
 background-color: rgba(0,0,0,0.5);}
 
-#glyphsImage {display: inline-block;
-float: right;
+#glyphsImage {display: block;
 text-align: center;
 background-color: rgba(0,0,0,0.5);
 padding: 10px;
-border: 1px #48734F solid;
-margin-left: 30px;
-width: 300px;}
+margin-left: auto;
+margin-right: auto;}
 
 #talentsPage ul, #talentsPage ol {padding-left: 20px;}
 
@@ -172,25 +172,24 @@ padding-left: 0px;}
 #talentsPage #glyphs ul li {padding-left: 0px;
 margin-left: -18px;}
 
-.mIcon {width: 30px;
-height: 30px;
-display: inline-block;
-background-repeat: no-repeat;
-background-position: center;
-background-size: 100%;
-border-radius: 15%;
-border: groove 1px;
-margin-bottom: -1px;}
+#statsImage {text-align: center;
+display: block;
+margin-left: auto;
+margin-right: auto;
+background-color: rgba(0,0,0,0.5);
+padding: 10px;}
 
-.sIcon {width: 20px;
-height: 20px;
+.secIntro {text-align: center;}
+
+.mIcon {width: 1em;
+height: 1em;
 display: inline-block;
 background-repeat: no-repeat;
 background-position: center;
 background-size: 100%;
 border-radius: 15%;
-border: groove 1px;
-margin-bottom: -1px;}
+border: groove 1px rgba(255,255,255,0.58);
+margin-bottom: -4px;}
 
 .AdrenalinRush {background-image: url("Assets/Graphics/SkillsIcons/AdrenalinRush.jpg");}
 
@@ -206,7 +205,13 @@ margin-bottom: -1px;}
 
 .Daggers {background-image: url("Assets/Graphics/SkillsIcons/Daggers.jpg");}
 
-.Swords {background-image: url("Assets/Graphics/SkillsIcons/Swords.jpg")}
+.Swords {background-image: url("Assets/Graphics/SkillsIcons/Swords.jpg");}
+
+.Precision {background-image: url("Assets/Graphics/SkillsIcons/Precision.jpg");}
+
+.Mastery {background-image: url("Assets/Graphics/SkillsIcons/Expertise.jpg");}
+
+.ARP {background-image: url("Assets/Graphics/SkillsIcons/ARP.jpg")}
 
 footer {border-top: 1px solid black;
 background-color: rgba(0,0,0,0.5);
@@ -268,15 +273,8 @@ footer ul li {display: inline-block;}
 	#mainPage .PC {display: none;}
 	#mainPage .Mobile {display: block;}
 	#mainContent {width: 100%;}
-	#talentsImage {float: none;
-	display: block;
-	width: 550px;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;}
+	#talentsImage {width: 95%}
 	#talentsImage img {width: 100%;}
-	#talents .Mobile {display: block;}
-	#talents .PC {display: none;}
 	
 }
 
@@ -309,14 +307,8 @@ footer ul li {display: inline-block;}
 	#logoWithText h1 {padding-bottom: 10px;}
 	#talentsImage {width: 95%}
 	#talentsImage img {width: 100%;}
-	#glyphsImage {display: block;
-	float: none;
-	text-align: center;
-	background-color: rgba(0,0,0,0.5);
-	padding: 10px;
-	border: 1px #48734F solid;
-	margin-left: auto;
-	margin-right: auto;}
-	#glyphs .PC {display: none;}
-	#glyphs .Mobile {display: block;}
+	#glyphsImage {width: 95%}
+	#glyphsImage img {width: 60%;}
+	#statsImage {width: 95%;}
+	#statsImage img {width: 100%;}
 }
