@@ -1,4 +1,12 @@
 /* CSS Document */
+/*All of the images, graphics and some of the names aren't mine and belong completely to the Blizzard Entertainment®. Everything is used on a legal basis due to an official permission given by blizzard which can be found here: https://www.blizzard.com/en-us/company/about/legal-faq.html
+
+World of Warcraft®
+©2004 Blizzard Entertainment, Inc. All rights reserved. World of Warcraft, Warcraft and Blizzard Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries.
+World of Warcraft®: Wrath of the Lich King®
+©2008 Blizzard Entertainment, Inc. All rights reserved. Wrath of the Lich King is a trademark, and World of Warcraft, Warcraft and Blizzard Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries.
+Hearthstone®: Heroes of Warcraft™
+©2014 Blizzard Entertainment, Inc. All rights reserved. Heroes of Warcraft is a trademark, and Hearthstone is a registered trademark of Blizzard Entertainment, Inc. in the U.S. and/or other countries.*/
 body {background-color: #172026;
 color: #F2EAD2;
 margin: 0px;
@@ -17,19 +25,27 @@ transition: color 0.5s ease;}
 
 h1 {color: #C935F2;
 font-family: Century Gothic, arial, sans-serif;
-font-weight: normal;}
+font-weight: normal;
+font-size: 2em;}
 
 h1 a:link, h1 a:visited {color: #C935F2;}
 
 h1 a:hover, h1 a:active {color: #C935F2;}
 
-h2 {font-weight: normal;}
+h2 {font-weight: normal;
+font-size: 1.75em;}
 
-h3 {font-weight: normal;}
+h3 {font-weight: normal;
+font-size: 1.75em;}
+
+p {font-size: 1em;}
 
 q {font-family: times, times new roman, serif;}
 
-header {background-image: url("./Assets/Images/Background.jpeg");
+header {background-image: url("./Assets/Images/Background.jpeg"); /*this image was taken here: https://www.facebook.com/Warcraft/photos/a.10155694376974034/10155694377344034/?type=1&theater
+	
+Although it was drawn by Laura Sava, it was commisioned by Blizzard Entertainment® and legaly belongs to them, hence I claim my right to use and display it for home, noncommercial and personal use for this project only, as it is stated here:
+https://www.blizzard.com/en-us/company/about/legal-faq.html*/
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
@@ -152,6 +168,9 @@ width: 300px;}
 
 #talentsPage #glyphs ul {list-style: none;
 padding-left: 0px;}
+
+#talentsPage #glyphs ul li {padding-left: 0px;
+margin-left: -18px;}
 
 .mIcon {width: 30px;
 height: 30px;
