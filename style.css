@@ -111,7 +111,7 @@ font-size: 2.5em;}
 #mainImage {float: right;
 margin-left: 40px;
 margin-right: 10px;
-width: 351px;}
+width: 350px;}
 
 #mainContent {margin-bottom: 20px;
 width: 920px;}
@@ -152,6 +152,42 @@ width: 300px;}
 
 #talentsPage #glyphs ul {list-style: none;
 padding-left: 0px;}
+
+.mIcon {width: 30px;
+height: 30px;
+display: inline-block;
+background-repeat: no-repeat;
+background-position: center;
+background-size: 100%;
+border-radius: 15%;
+border: groove 1px;
+margin-bottom: -1px;}
+
+.sIcon {width: 20px;
+height: 20px;
+display: inline-block;
+background-repeat: no-repeat;
+background-position: center;
+background-size: 100%;
+border-radius: 15%;
+border: groove 1px;
+margin-bottom: -1px;}
+
+.AdrenalinRush {background-image: url("Assets/Graphics/SkillsIcons/AdrenalinRush.jpg");}
+
+.KillingSpree {background-image: url("Assets/Graphics/SkillsIcons/KillingSpree.jpg");}
+
+.Rupture {background-image: url("Assets/Graphics/SkillsIcons/Rupture.jpg");}
+
+.Eviscerate {background-image: url("Assets/Graphics/SkillsIcons/Eviscerate.jpg");}
+
+.VilePoisons {background-image: url("Assets/Graphics/SkillsIcons/VilePoison.jpg");}
+
+.InstantPosion {background-image: url("Assets/Graphics/SkillsIcons/InstantPosion.jpg");}
+
+.Daggers {background-image: url("Assets/Graphics/SkillsIcons/Daggers.jpg");}
+
+.Swords {background-image: url("Assets/Graphics/SkillsIcons/Swords.jpg")}
 
 footer {border-top: 1px solid black;
 background-color: rgba(0,0,0,0.5);
