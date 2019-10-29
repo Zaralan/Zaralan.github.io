@@ -40,6 +40,8 @@ font-size: 1.75em;}
 
 p {font-size: 1em;}
 
+abbr {text-decoration: none;}
+
 header q {font-family: times, times new roman, serif;}
 
 header {background-image: url("./Assets/Images/Background.jpeg"); /*this image was taken here: https://www.facebook.com/Warcraft/photos/a.10155694376974034/10155694377344034/?type=1&theater
