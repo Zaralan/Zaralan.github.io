@@ -44,7 +44,7 @@ abbr {text-decoration: none;}
 
 header q {font-family: times, times new roman, serif;}
 
-header {background-image: url("./Assets/Images/Background.jpeg"); /*this image was taken here: https://www.facebook.com/Warcraft/photos/a.10155694376974034/10155694377344034/?type=1&theater
+header {background-image: url("./Assets/Images/Background.jpg"); /*this image was taken here: https://www.facebook.com/Warcraft/photos/a.10155694376974034/10155694377344034/?type=1&theater
 	
 Although it was drawn by Laura Sava, it was commisioned by Blizzard Entertainment® and legaly belongs to them, hence I claim my right to use and display it for home, noncommercial and personal use for this project only, as it is stated here:
 https://www.blizzard.com/en-us/company/about/legal-faq.html*/
@@ -133,10 +133,15 @@ font-size: 2.5em;}
 #mainImage {float: right;
 margin-left: 40px;
 margin-right: 10px;
-width: 350px;}
+width: 350px;
+height: 350px;
+background-image: url("Assets/Images/mainImage.jpg");
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;}
 
 #mainContent {margin-bottom: 20px;
-width: 920px;}
+width: 60%;}
 
 #mainContent:after {content: "";
 display: table;
@@ -236,7 +241,6 @@ footer ul li {display: inline-block;}
 
 @media screen and (max-width: 1280px){
 	#container {width: 100%;}
-	#mainContent {width: 60%;}
 }
 
 @media screen and (max-width: 800px){

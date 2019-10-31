@@ -51,8 +51,18 @@ padding-right: 20px;}
 
 h1 {text-align: center;
 margin-top: 300px;
-font-size: 10vw;
-text-shadow:  5px 5px black;}
+font-size: 8vw;
+text-shadow:  3px 5px black;
+color: #F2EAD2;}
+
+#Slider3 h1 {font-size: 7.5vw;}
+
+#hidden {background-color: rgba(0,0,0,0.00);
+color: white;
+cursor: text;}
+
+#notThatHidden {background-color: rgba(0,0,0,0.00);
+color: #C935F2;}
 
 @media screen and (max-width: 765px){
 	body {font-size: 60px;}
