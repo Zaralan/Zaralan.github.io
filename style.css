@@ -186,6 +186,20 @@ margin-right: auto;
 background-color: rgba(0,0,0,0.5);
 padding: 10px;}
 
+#OpenerImages {text-align: center;
+display: block;
+margin-left: auto;
+margin-right: auto;
+background-color: rgba(0,0,0,0.5);
+padding: 10px;}
+
+#OpenerImages img {width: 450px;
+margin-top: 10px;}
+
+.text {font-size: 2.5em;
+margin-left: 10px;
+margin-right: 10px;}
+
 .secIntro {text-align: center;}
 
 .mIcon {width: 1em;
@@ -319,4 +333,5 @@ footer ul li {display: inline-block;}
 	#glyphsImage img {width: 60%;}
 	#statsImage {width: 95%;}
 	#statsImage img {width: 100%;}
+	#OpenerImages img {width: 100%;}
 }
