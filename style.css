@@ -7,6 +7,10 @@ World of Warcraft®: Wrath of the Lich King®
 ©2008 Blizzard Entertainment, Inc. All rights reserved. Wrath of the Lich King is a trademark, and World of Warcraft, Warcraft and Blizzard Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries.
 Hearthstone®: Heroes of Warcraft™
 ©2014 Blizzard Entertainment, Inc. All rights reserved. Heroes of Warcraft is a trademark, and Hearthstone is a registered trademark of Blizzard Entertainment, Inc. in the U.S. and/or other countries.*/
+*, *:befor, *:after {box-sizing: inherit;}
+
+html {box-sizing: border-box;}
+
 body {background-color: #172026;
 color: #F2EAD2;
 margin: 0px;
@@ -88,7 +92,7 @@ font-weight: bolder}
 width: 185px;
 margin-left: 15px;}
 
-header img {width: 185px;
+#logoWithText img {width: 185px;
 height: 200px;}
 
 header h1 {clear: left;
@@ -96,12 +100,10 @@ font-size: 1.5em;
 text-align: center;
 margin-top: -10px;}
 
-header h1 span {display: block;
+#logoWithText h1 span {display: block;
 font-size: 0.8em;}
 
 main {margin: 10px;}
-
-sup {font-size: 0.5em;}
 
 section {padding: 10px;
 background-color: rgba(0,0,0,0.5);
@@ -132,6 +134,8 @@ font-size: 2.5em;}
 
 #mainPage h2 {color: #C935F2;}
 
+#mainPage sup {font-size: 0.5em;}
+
 #mainImage {float: right;
 margin-left: 40px;
 margin-right: 10px;
@@ -142,20 +146,15 @@ background-repeat: no-repeat;
 background-position: center center;
 background-size: cover;}
 
-#mainContent {margin-bottom: 20px;
+#mainContent {margin-bottom: 30px;
 width: 60%;}
-
-#mainContent:after {content: "";
-display: table;
-clear: both;}
 
 #mainSlider {display: block;
 margin: 0px auto;
 width: 100%;
 height: 600px;
 padding: 0px;
-border: 1px #48734F ridge;
-background-color: rgba(0,0,0,0.5);}
+border: 1px #48734F ridge;}
 
 #talentsImage {display: block;
 text-align: center;
