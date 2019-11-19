@@ -2,12 +2,77 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zaralan's Projects</title>
+<style>
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: century gothic, sans-serif;
+}
+h1 {
+	text-align: center;
+	font-size: 3em;
+}
+a:link, a:visited, a:hover, a:active {
+	color: black;
+	text-decoration: none;
+}
+ul {
+	padding: 0px;
+	text-align: center;
+}
+li {
+	display: inline-block;
+	padding-bottom: 3px;
+	margin-right: 10px;
+	margin-left: 10px;
+	font-size: 2em;
+}
+li:after {
+	content: '';
+	display: block;
+	border-bottom: solid 2px orange;
+	transform: scaleX(0);
+	transition: transform 500ms ease;
+	transform-origin: center;
+}
+li:hover:after {
+	transform: scaleX(1);
+	transform-origin: center;
+}
+.left:hover:after {
+	transform: scaleX(1);
+	transform-origin: left;
+}
+.left:after {
+	transform-origin: left;
+}
+.right:hover:after {
+	transform: scaleX(1);
+	transform-origin: right;
+}
+.right:after {
+	transform-origin: right;
+}
+
+@media screen and (max-width: 600px) {
+li {
+	display: block;
+	margin-left: 25%;
+	margin-right: 25%;
+	font-size: 1.5em;
+}
+}
+</style>
 </head>
 
 <body>
-<h1>Links to the projects</h1>
-<p><a href="./3.3.5aRogueGuide/index.html">3.3.5a Combat Rogue Guide</a></p>
-<p><a href="./ITSIT/index.html">ITSIT Page</a></p>
+<h1>Links to my projects</h1>
+<ul>
+  <li class="left"><a href="./3.3.5aRogueGuide/index.html" target="_blank">ROGUE GUIDE</a></li>
+  <li><a href="#">OR</a></li>
+  <li class="right"><a href="./ITSIT/index.html" target="_blank">ITSIT WEB SITE</a></li>
+</ul>
 </body>
 </html>
