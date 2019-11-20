@@ -2,10 +2,44 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link type="text/css" rel="stylesheet" href="styles.css">
-<title>Main page</title>
+<title>Institute of Transport Service and Tourism</title>
+<script>
+  function openNav() {document.getElementById("sideNav").style.width = "200px";}
+  function closeNav() {document.getElementById("sideNav").style.width = "0";}
+</script>
 </head>
 
 <body>
+<div id="container">
+  <header>
+    <ul id="lang">
+      <li><a href="#"><img src="http://placekitten.com/17/10" alt=""> EN</a></li>
+      <li>/</li>
+      <li><a href="#"><img src="http://placekitten.com/17/10" alt=""> RU</a></li>
+    </ul>
+    <nav id="topNav">
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Cources</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contacts</a></li>
+      </ul>
+    </nav>
+	<span id="mobNav" onClick="openNav()">&#9776;</span>
+    <nav id="sideNav" class="sidenav">
+      <ul>
+        <span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9776;</span>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Cources</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>123</main>
+  <footer></footer>
+</div>
 </body>
 </html>

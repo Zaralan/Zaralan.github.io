@@ -1,2 +1,84 @@
 /* CSS Document */
 
+*, *:before, *:after {box-sizing: inherit;}
+
+html {box-sizing: border-box;
+height: 100%;}
+
+body {background-color: #F0F0F0;
+color: #041205;
+margin: 0px;
+padding: 0px;
+height: 100%;
+font-family: century gothic, verdana, arial, sans-serif;}
+
+a:link, a:visited {color: #51A66E;
+text-decoration: none;}
+
+#container {width: 100%;
+height: 100%;}
+
+header {background-color: white;
+height: 100%;}
+
+header ul {list-style: none;
+margin: 0px;
+padding: 0px;}
+
+header ul li {display: inline;}
+
+#mobNav {display: none;}
+
+#lang {text-align: right;
+font-size: .9em;
+color: #041205;
+padding: 5px 5px 0 0;
+font-family: times, times new roman, serif;}
+
+#lang a:link, #lang a:visited {color: #041205;}
+
+#topNav {font-size: 2em;
+margin-left: 15px;
+margin-top: -5px;}
+
+#topNav ul li {padding-right: 15px;}
+
+#topNav ul li:last-child {padding-right: 0px;}
+
+#topNav ul li:first-child {margin-left: 10px;}
+
+.sidenav {position: relative;
+margin-top: -1.35em;
+height: 100%;
+width: 0;
+background-color: #041205;
+overflow-x: hidden;
+padding-top: 15px;
+transition: 0.2s;
+color: #F0F0F0;}
+
+.sidenav a {font-size: 1.5em;
+padding: 0px 15px 15px 5px;
+text-decoration: none;
+display: block;
+transition: 0.4s;
+text-align: right;
+color: #F0F0F0;}
+
+.sidenav ul:first-child {margin-top: -5px;}
+
+.sidenav .closebtn {
+position: absolute;
+top: 0;
+left: 10px;
+font-size: 2em;}
+
+@media screen and (max-width: 768px){
+#topNav ul li {display: none;}
+#mobNav {display: block;
+font-size: 2em;
+position: absolute;
+top: 0;
+left: 10px;
+color: #51A66E}
+}
