@@ -124,13 +124,12 @@ margin-right: 10px;}
 height: 128px;
 transition: 0.3s ease;}
 
-#logo h1 {margin: 0 30px 0 0;
-text-align: right;
+#logo h1 {margin: 0 35px 0 0;
 font-size: 2.35em;
 transition: 0.3s ease;
 font-weight: normal;}
 
-#logo h1 span {display: block;}
+#logo h1 span {text-align: center;}
 
 #hText {margin-left: 30px;
 margin-top: 30px;
@@ -148,7 +147,7 @@ main {height: 99%;}
 @media screen and (max-width: 1280px){
 	#topNav {font-size: 1.5em;}
 	#logo h1 {font-size: 1.8em;
-	margin: 0 17.5px 0 0;
+	margin: 0 20px 0 0;
 	font-weight: bold;}
 	#logo img {width: 300px;
 	height: 96px;}
@@ -182,7 +181,7 @@ main {height: 99%;}
 	#logo img {width: 200px;
 	height: 64px;}
 	#logo h1 {font-size: 1.2em;
-	margin: 0 12.5px 0 0;}
+	margin: 0 15px 0 0;}
 	#hText {margin: 0 auto;
 	margin-top: 30px;
 	width: 100%;}
