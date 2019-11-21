@@ -4,7 +4,8 @@
 
 html {box-sizing: border-box;}
 
-body {background-color: #F0F0F0;
+body {position: relative;
+background-color: #F0F0F0;
 color: #041205;
 margin: 0px;
 padding: 0px;
