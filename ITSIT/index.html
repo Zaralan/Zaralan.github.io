@@ -8,11 +8,13 @@
 <script>
   function openNav() {document.getElementById("sideNav").style.width = "250px";}
   function closeNav() {document.getElementById("sideNav").style.width = "0";}
+  function disableOverflow() {document.getElementById("BODY").style.overflow = "hidden";}
+  function enableOverflow() {document.getElementById("BODY").style.overflow = "visible";}
 </script>
 <script src="https://kit.fontawesome.com/ed9239fef9.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body id="BODY">
 <div id="container">
   <header>
     <ul id="lang">
@@ -28,14 +30,14 @@
         <li><a href="#">Contacts</a></li>
       </ul>
     </nav>
-    <em class="fas fa-bars" id="mobNav" onClick="openNav()"></em>
+    <i class="fas fa-bars" id="mobNav" onClick="openNav(); disableOverflow();"></i>
     <nav id="sideNav" class="sidenav">
       <ul>
-        <i class="fas fa-bars closebtn" onclick="closeNav()"></i>
-        <li><a href="#main" onclick="closeNav()">About</a></li>
-        <li><a href="#" onclick="closeNav()">Cources</a></li>
-        <li><a href="#" onclick="closeNav()">News</a></li>
-        <li><a href="#" onclick="closeNav()">Contacts</a></li>
+        <em class="fas fa-bars closebtn" onClick="closeNav(); enableOverflow();"></em>
+        <li><a href="#main" onclick="closeNav(); enableOverflow();">About</a></li>
+        <li><a href="#" onclick="closeNav(); enableOverflow();">Cources</a></li>
+        <li><a href="#" onclick="closeNav(); enableOverflow();">News</a></li>
+        <li><a href="#" onclick="closeNav(); enableOverflow();">Contacts</a></li>
       </ul>
       <div id="mobLang"> <a href="#"><span class="langIcon EN"></span> ENG</a> <a href="#"><span class="langIcon RU"></span>RUS</a> </div>
     </nav>
@@ -49,7 +51,7 @@
       <p>Институт Транспорта, Сервиса и Туризма Нижегородской Области предоставляет высококачественное высшее образование по специальностям Сервиса и Технического обслуживания на бюджетной или доступной контрактной основе для всех желающих. Набор на следующий год обучения проводится уже сейчас!</p>
     </div>
   </header>
-  <main id="main">1245</main>
+  <main id="main">12456</main>
   <footer>123</footer>
 </div>
 </body>
