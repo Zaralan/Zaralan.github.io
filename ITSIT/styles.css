@@ -42,6 +42,17 @@ font-family: times, times new roman, serif;}
 #lang img {width: 17px;
 height: 10px}
 
+.langIcon {width: 17px;
+height: 11px;
+display: inline-block;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;}
+
+.RU {background-image: url("./Assets/Graphics/RuFlag.jpg");}
+
+.EN {background-image: url("./Assets/Graphics/UsFlag.jpg");}
+
 #lang a:link, #lang a:visited {color: #041205;}
 
 #topNav {font-size: 2em;
@@ -78,7 +89,7 @@ padding-top: 15px;
 transition: 0.2s;
 color: #F0F0F0;}
 
-.sidenav a {font-size: 1.5em;
+.sidenav ul li a {font-size: 1.5em;
 padding: 0px 15px 15px 0px;
 text-decoration: none;
 display: block;
@@ -93,10 +104,18 @@ color: #F0F0F0;}
 .sidenav .closebtn {position: absolute;
 top: 0;
 left: 0;
-padding: 0px 30px 30px 10px;
+padding: 6.5px 30px 30px 10px;
 font-size: 2em;
 cursor: pointer;
 color: rgba(240,240,240,1.00);}
+
+#mobLang {margin-top: 20px;
+display: flex;
+justify-content: center;}
+
+#mobLang a:first-child {margin-right: 40px;}
+
+#mobLang a {text-align: center;}
 
 #logo {text-align: right;
 margin-right: 10px;}
@@ -105,61 +124,68 @@ margin-right: 10px;}
 height: 128px;
 transition: 0.3s ease;}
 
-#logo h1 {margin: 0 25px 0 0;
+#logo h1 {margin: 0 30px 0 0;
 text-align: right;
 font-size: 2.35em;
-font-weight: normal;
-transition: 0.3s ease;}
+transition: 0.3s ease;
+font-weight: normal;}
 
 #logo h1 span {display: block;}
 
 #hText {margin-left: 30px;
 margin-top: 30px;
 padding: 5px 30px 30px 30px;
-background-color: rgba(255,255,255,0.5);
-width: 60%;}
+background-color: rgba(255,255,255,0.4);
+width: 70%;}
 
 #hText h2 {font-size: 2.5em;}
 
-#hText p {font-size: 1.5em;}
+#hText p {font-size: 1.3em;
+width: 75%;}
 
 main {height: 99%;}
 
 @media screen and (max-width: 1280px){
 	#topNav {font-size: 1.5em;}
 	#logo h1 {font-size: 1.8em;
-	margin: 0 15px 0 0;}
+	margin: 0 17.5px 0 0;
+	font-weight: bold;}
 	#logo img {width: 300px;
 	height: 96px;}
 	#hText {width: 70%}
 	#hText h2 {font-size: 2em;}
-	#hText p {font-size: 1.35em;}
+	#hText p {font-size: 1.2em;
+	width: 100%;}
 }
 
 @media screen and (max-width: 900px){
-	#hText {width: 70%;}
-	#hText h2 {font-size: 1.5em;}
-	#hText p {font-size: 1.2em;}
-}
-
-@media screen and (max-width: 768px){
+	#logo img {margin-top: 20px;}
+	#lang {display: none;}
+	.langIcon {display: block;
+	width: 50px;
+	height: 30px;
+	margin-bottom: 5px;}
 	#topNav ul li {display: none;}
 	#mobNav {display: block;
 	font-size: 2em;
 	position: absolute;
 	top: 0;
 	left: 0;
-	padding: 0px 30px 30px 10px;
+	padding: 5px 30px 30px 10px;
 	color: rgba(81,166,110,1.00);
 	cursor: pointer;}
+	#hText {width: 70%;}
+	#hText h2 {font-size: 1.5em;}
+}
+
+@media screen and (max-width: 768px){
 	#logo img {width: 200px;
-	height: 64px;
-	margin-top: 20px;}
+	height: 64px;}
 	#logo h1 {font-size: 1.2em;
-	margin: 0 10px 0 0;}
+	margin: 0 12.5px 0 0;}
 	#hText {margin: 0 auto;
 	margin-top: 30px;
-	width: 85%;}
+	width: 100%;}
 	#hText h2 {text-align: center;}
 	#hText p {text-align: center;}
 }

@@ -9,42 +9,44 @@
   function openNav() {document.getElementById("sideNav").style.width = "250px";}
   function closeNav() {document.getElementById("sideNav").style.width = "0";}
 </script>
+<script src="https://kit.fontawesome.com/ed9239fef9.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 <div id="container">
   <header>
-      <ul id="lang">
-        <li><a href="#"><img src="./Assets/Graphics/UsFlag.jpg" alt=""> EN</a></li>
-        <li>/</li>
-        <li><a href="#"><img src="./Assets/Graphics/RuFlag.jpg" alt=""> RU</a></li>
+    <ul id="lang">
+      <li><a href="#"><span class="langIcon EN"></span> EN</a></li>
+      <li>/</li>
+      <li><a href="#"><span class="langIcon RU"></span> RU</a></li>
+    </ul>
+    <nav id="topNav">
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Cources</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contacts</a></li>
       </ul>
-      <nav id="topNav">
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Cources</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Contacts</a></li>
-        </ul>
-      </nav>
-      <span id="mobNav" onClick="openNav()">A</span>
-      <nav id="sideNav" class="sidenav">
-        <ul>
-          <span class="closebtn" onclick="closeNav()">A</span>
-          <li><a href="#main" onclick="closeNav()">About</a></li>
-          <li><a href="#" onclick="closeNav()">Cources</a></li>
-          <li><a href="#" onclick="closeNav()">News</a></li>
-          <li><a href="#" onclick="closeNav()">Contacts</a></li>
-        </ul>
-      </nav>
-      <div id="logo"> <img src="./Assets/Graphics/MainLogo.png" alt="Institure of Transport, Service and Tourism">
-        <h1>Institute of Transport <span>Service and Tourism</span></h1>
-      </div>
-      <div id="hText">
-        <h2>We don't choose the best students,<br>
-          We make everyone the best.</h2>
-		  <p>Институт Транспорта, Сервиса и Туризма Нижегородской Области предоставляет высококачественное высшее образование по специальностям Сервиса и Технического обслуживания на бюджетной или доступной контрактной основе для всех желающих. Набор на следующий год обучения проводится уже сейчас!</p>
-      </div>
+    </nav>
+    <em class="fas fa-bars" id="mobNav" onClick="openNav()"></em>
+    <nav id="sideNav" class="sidenav">
+      <ul>
+        <i class="fas fa-bars closebtn" onclick="closeNav()"></i>
+        <li><a href="#main" onclick="closeNav()">About</a></li>
+        <li><a href="#" onclick="closeNav()">Cources</a></li>
+        <li><a href="#" onclick="closeNav()">News</a></li>
+        <li><a href="#" onclick="closeNav()">Contacts</a></li>
+      </ul>
+      <div id="mobLang"> <a href="#"><span class="langIcon EN"></span> ENG</a> <a href="#"><span class="langIcon RU"></span>RUS</a> </div>
+    </nav>
+    <div id="logo"> <img src="./Assets/Graphics/MainLogo.png" alt="Institure of Transport, Service and Tourism">
+      <h1>Institute of Transport <span>Service and Tourism</span></h1>
+    </div>
+    <div id="hText">
+      <h2>We don't choose the best students,<br>
+        We make everyone the best.</h2>
+      <p>Институт Транспорта, Сервиса и Туризма Нижегородской Области предоставляет высококачественное высшее образование по специальностям Сервиса и Технического обслуживания на бюджетной или доступной контрактной основе для всех желающих. Набор на следующий год обучения проводится уже сейчас!</p>
+    </div>
   </header>
   <main id="main">1245</main>
   <footer>123</footer>
