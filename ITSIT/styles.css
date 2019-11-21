@@ -2,13 +2,15 @@
 
 *, *:before, *:after {box-sizing: inherit;}
 
-html {box-sizing: border-box;}
+html {box-sizing: border-box;
+height: 100%;}
 
 body {background-color: #F0F0F0;
 color: #041205;
 margin: 0px;
 padding: 0px;
-font-family: century gothic, verdana, arial, sans-serif;}
+font-family: century gothic, verdana, arial, sans-serif;
+height: 100%;}
 
 a:link, a:visited {color: #51A66E;
 text-decoration: none;
@@ -17,7 +19,8 @@ transition: 0.25s;}
 a:hover, a:active {color: #2EB532;
 transition: 0.25s ease;}
 
-#container {width: 100%;}
+#container {width: 100%;
+height: 100%;}
 
 header {background-image: url("./Assets/Images/Header.jpg");
 background-repeat: no-repeat;
