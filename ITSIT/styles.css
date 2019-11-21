@@ -55,15 +55,21 @@ background-position: center center;}
 
 #lang a:link, #lang a:visited {color: #041205;}
 
-#topNav {font-size: 2em;
+#topNav {position: fixed;
+background-color: rgba(240,240,240,0.82);
+font-size: 2em;
 margin-left: 15px;
-margin-top: -5px;}
+margin-top: -5px;
+padding-top: 5px;
+padding-bottom: 5px;
+border-bottom: 2px #2EB532 solid;}
 
-#topNav ul li {padding-right: 15px;}
+#topNav ul li {padding-right: 8px;
+padding-left: 7px;}
 
-#topNav ul li:last-child {padding-right: 0px;}
+#topNav ul li:first-child {padding-left: 15px;}
 
-#topNav ul li:first-child {margin-left: 10px;}
+#topNav ul li:last-child {padding-right: 15px;}
 
 #topNav ul li:after {content: '';
 display: block;
@@ -77,7 +83,8 @@ transform-origin: left;}
 
 #mobNav {display: none;}
 
-.sidenav {position: fixed;
+.sidenav {display: none;
+position: fixed;
 left: 0;
 top: 0;
 z-index: 1;
@@ -98,14 +105,26 @@ transition: 0.4s;
 text-align: center;
 color: #F0F0F0;}
 
+.sidenav ul li:after {content: '';
+display: block;
+border-bottom: solid 2px #2EB532;
+transform: scaleX(0);
+transition: transform 500ms ease;
+transform-origin: right;}
+
+.sidenav ul li:hover:after {transform: scaleX(1);
+transform-origin: left;}
+
 .sidenav ul li {display: block;}
 
-.sidenav ul {margin-top: 80%;}
+.sidenav ul {position: absolute;
+top: 25%;
+left: 20%;}
 
 .sidenav .closebtn {position: absolute;
 top: 0;
 left: 0;
-padding: 6.5px 30px 30px 10px;
+padding: 6px 30px 30px 10px;
 font-size: 2em;
 cursor: pointer;
 color: rgba(240,240,240,1.00);}
@@ -113,20 +132,19 @@ color: rgba(240,240,240,1.00);}
 #mobLang {margin-bottom: 20px;
 display: flex;
 position: absolute;
-bottom: 0;
-justify-content: center;}
+top: 0;
+right: 0;}
 
-#mobLang a:first-child {margin-right: 40px;
-margin-left: 55px;}
-
-#mobLang a {text-align: center;}
+#mobLang a {text-align: center;
+padding: 8px 10px 10px 10px;}
 
 #logo {text-align: right;
 margin-right: 10px;}
 
 #logo img {width: 400px;
 height: 128px;
-transition: 0.3s ease;}
+transition: 0.3s ease;
+margin-top: 10px;}
 
 #logo h1 {margin: 0 35px 0 0;
 font-size: 2.35em;
@@ -165,17 +183,19 @@ main {height: 99%;}
 	#logo img {margin-top: 20px;}
 	#lang {display: none;}
 	.langIcon {display: block;
-	width: 50px;
-	height: 30px;
+	width: 35px;
+	height: 20px;
 	margin-bottom: 5px;}
-	#topNav ul li {display: none;}
+	.sidenav {display: block;}
+	#topNav {display: none;}
 	#mobNav {display: block;
 	font-size: 2em;
 	position: fixed;
 	top: 0;
 	left: 0;
 	padding: 5px 30px 30px 10px;
-	color: rgba(81,166,110,1.00);
+	text-shadow: 1px 1px rgba(0,0,0,0.5);
+	color: #51A66E;
 	cursor: pointer;}
 	#hText {width: 70%;}
 	#hText h2 {font-size: 1.5em;}
@@ -191,4 +211,9 @@ main {height: 99%;}
 	width: 100%;}
 	#hText h2 {text-align: center;}
 	#hText p {text-align: center;}
+}
+
+@media screen and (max-height: 450px){
+	.sidenav ul li a {font-size: 1.4em;}
+	.sidenav ul {left: 27.5%;}
 }
