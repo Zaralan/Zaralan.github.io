@@ -95,7 +95,8 @@ top: 0;
 left: 0;
 padding: 0px 30px 30px 10px;
 font-size: 2em;
-cursor: pointer;}
+cursor: pointer;
+color: #F0F0F0;}
 
 #logo {text-align: right;
 margin-right: 10px;}
