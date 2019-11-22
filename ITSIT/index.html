@@ -8,11 +8,15 @@
 <script>
   function openNav() {document.getElementById("sideNav").style.width = "250px";}
   function closeNav() {document.getElementById("sideNav").style.width = "0";}
+  function disableScroll() {document.body.addEventListener('touchstart', function(e){e.preventDefault();});}
+  function enableScroll() {document.body.removeEventListener('touchstart', function(e){e.preventDefault();});}
+  function disableOverflow() {document.getElementById("BODY").style.overflow = "hidden";}
+  function enableOverflow() {document.getElementById("BODY").style.overflow = "visible";}
 </script>
 <script src="https://kit.fontawesome.com/ed9239fef9.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body id="BODY">
 <div id="container">
   <header>
     <ul id="lang">
@@ -28,14 +32,14 @@
         <li><a href="#">Contacts</a></li>
       </ul>
     </nav>
-    <i class="fas fa-bars" id="mobNav" onClick="openNav();"></i>
+    <i class="fas fa-bars" id="mobNav" onClick="openNav(); disableScroll(); disableOverflow();"></i>
     <nav id="sideNav" class="sidenav">
-	<i class="fas fa-bars closebtn" onClick="closeNav();"></i>
+	<i class="fas fa-bars closebtn" onClick="closeNav(); enableScroll(); enableOverflow();"></i>
       <ul>
-        <li><a href="#main" onclick="closeNav();">About</a></li>
-        <li><a href="#" onclick="closeNav();">Cources</a></li>
-        <li><a href="#" onclick="closeNav();">News</a></li>
-        <li><a href="#" onclick="closeNav();">Contacts</a></li>
+        <li><a href="#main" onclick="closeNav(); enableScroll(); enableOverflow();">About</a></li>
+        <li><a href="#" onclick="closeNav(); enableScroll(); enableOverflow();">Cources</a></li>
+        <li><a href="#" onclick="closeNav(); enableScroll(); enableOverflow();">News</a></li>
+        <li><a href="#" onclick="closeNav(); enableScroll(); enableOverflow();">Contacts</a></li>
       </ul>
       <div id="mobLang"> <a href="#"><span class="langIcon EN"></span> ENG</a> <a href="#"><span class="langIcon RU"></span>RUS</a> </div>
     </nav>
@@ -49,7 +53,7 @@
       <p>Институт Транспорта, Сервиса и Туризма Нижегородской Области предоставляет высококачественное высшее образование по специальностям Сервиса и Технического обслуживания на бюджетной или доступной контрактной основе для всех желающих. Набор на следующий год обучения проводится уже сейчас!</p>
     </div>
   </header>
-  <main id="main">123</main>
+  <main id="MAIN">123321</main>
   <footer>321</footer>
 </div>
 </body>
