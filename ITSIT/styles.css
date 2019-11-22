@@ -97,7 +97,7 @@ top: 0;
 z-index: 1;
 height: 100%;
 width: 0;
-background-color: rgba(240,240,240,0.9);
+background-color: rgba(240,240,240,0.98);
 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 overflow-x: hidden;
 padding-top: 15px;
@@ -116,16 +116,6 @@ text-shadow: -1px 2px 3px rgba(0,0,0,0.3);}
 
 .sidenav ul li a:hover {color: #2EB532;
 transition: 0.25s ease;}
-
-.sidenav ul li:after {content: '';
-display: block;
-border-bottom: solid 2px #2EB532;
-transform: scaleX(0);
-transition: transform 500ms ease;
-transform-origin: right;}
-
-.sidenav ul li:hover:after {transform: scaleX(1);
-transform-origin: left;}
 
 .sidenav ul li {display: block;}
 
@@ -155,16 +145,6 @@ text-shadow: -1px 2px 3px rgba(0,0,0,0.2);}
 
 #mobLang a {text-align: center;
 padding: 8px 10px 10px 10px;}
-
-#mobLang a:after {content: '';
-display: block;
-border-bottom: solid 1px #2EB532;
-transform: scaleX(0);
-transition: transform 500ms ease;
-transform-origin: right;}
-
-#mobLang a:hover:after {transform: scaleX(1);
-transform-origin: left;}
 
 #logo {text-align: right;
 margin-right: 10px;}
