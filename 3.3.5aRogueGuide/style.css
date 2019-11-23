@@ -9,7 +9,8 @@ Hearthstone®: Heroes of Warcraft™
 ©2014 Blizzard Entertainment, Inc. All rights reserved. Heroes of Warcraft is a trademark, and Hearthstone is a registered trademark of Blizzard Entertainment, Inc. in the U.S. and/or other countries.*/
 *, *:befor, *:after {box-sizing: inherit;}
 
-html {box-sizing: border-box;}
+html {box-sizing: border-box;
+scroll-behavior: smooth;}
 
 body {background-color: #172026;
 color: #F2EAD2;
