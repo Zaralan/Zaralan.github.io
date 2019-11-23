@@ -85,6 +85,8 @@ transform: scaleX(0);
 transition: transform 500ms ease;
 transform-origin: right;}
 
+#topNav .fas {font-size: .85em;}
+
 #topNav ul li:hover:after {transform: scaleX(1);
 transform-origin: left;}
 
@@ -110,7 +112,6 @@ padding-top: 12px;
 text-decoration: none;
 display: block;
 transition: 0.4s;
-text-align: center;
 color: #51A66E;
 text-shadow: -1px 2px 3px rgba(0,0,0,0.3);}
 
@@ -121,8 +122,9 @@ transition: 0.25s ease;}
 
 .sidenav ul {position: absolute;
 top: 24%;
-right: 50px;
-width: 150px;}
+left: 40px;}
+
+.sidenav ul li .fas {font-size: .85em;}
 
 .sidenav .closebtn {position: absolute;
 top: 0;
@@ -217,7 +219,7 @@ width: 75%;}
 }
 
 @media screen and (max-height: 450px){
-	.sidenav ul li a {font-size: 1.4em;}
-	.sidenav ul {left: 27.5%;
-	top: 15%}
+	.sidenav ul li a {font-size: 1.5em;}
+	.sidenav ul {left: 55px;
+	top: 17%}
 }
