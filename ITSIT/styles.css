@@ -208,13 +208,28 @@ justify-content: center;}
 
 .aboutContent img {border-radius: 50%;
 width: 175px;
-height: 175px;
-box-shadow: -4px 8px 16px 0px rgba(0,0,0,0.2);}
+height: 175px;}
 
 .aboutContentText h2 {margin-top: 0px;
 font-size: 1.75em;}
 
 .aboutContentText p {font-size: 1.2em;}
+
+.mobileExtraButtonOn, .mobileExtraButtonOff {display: none;
+background-color: #51A66E;
+color: #F0F0F0;
+border: none;
+padding: 10px;
+font-size: 1.1em;
+border-radius: 3px;
+box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.2);}
+
+.mobileExtraButtonOn .fas, .mobileExtraButtonOff .fas {margin-left: 5px;}
+
+.aboutMobileExtra {display: none;
+padding: 10px;
+margin-bottom: 20px;
+box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);}
 
 @media screen and (max-width: 1670px){
 	.aboutContent {margin-bottom: 20px;}
@@ -265,6 +280,7 @@ font-size: 1.75em;}
 	.aboutContent {flex: 1;
 	flex-basis: 100%;}
 	.aboutContentText {width: 100%;}
+	.aboutContent img {order: 2;}
 }
 	
 @media screen and (max-width: 768px){
@@ -274,8 +290,17 @@ font-size: 1.75em;}
 	margin: 0 15px 0 0;}
 	#hText {width: 100%;
 	border-radius: 0px;}
+	#aboutIntro h1 {font-size: 1.6em;}
+	#aboutIntro p {font-size: 1.05em;}
 	.aboutContentText h2 {font-size: 1.4em;}
-	.aboutContentText p {font-size: 1em;}
+	.aboutContentText {margin: 0px;}
+	.aboutContentText p {display: none;}
+	.mobileExtraButtonOn {display: inline;}
+}
+
+@media screen and (max-width: 500px){
+	.aboutContent img {height: 20vw;
+	width: 20vw;}
 }
 
 @media screen and (max-height: 450px){
