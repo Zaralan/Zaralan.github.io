@@ -184,7 +184,7 @@ width: 75%;}
 #about {width: 80%;
 margin: auto;}
 
-#aboutIntro {margin-bottom: 30px;}
+#aboutIntro {margin-bottom: 50px;}
 
 #aboutIntro h1 {font-size: 2.3em;}
 
@@ -208,7 +208,7 @@ height: 175px;}
 .aboutContentText h2 {margin-top: 0px;
 font-size: 1.75em;}
 
-.aboutContentText p {font-size: 1.1em;}
+.aboutContentText p {font-size: 1.2em;}
 
 @media screen and (max-width: 1670px){
 	.aboutContent {margin-bottom: 20px;}
@@ -268,8 +268,8 @@ font-size: 1.75em;}
 	margin: 0 15px 0 0;}
 	#hText {width: 100%;
 	border-radius: 0px;}
+	.aboutContentText h2 {font-size: 1.4em;}
 	.aboutContentText p {font-size: 1em;}
-	.aboutContentText h2 {font-size: 1.5em;}
 }
 
 @media screen and (max-height: 450px){
