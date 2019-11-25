@@ -231,6 +231,8 @@ padding: 10px;
 margin-bottom: 20px;
 box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);}
 
+.mobile {display: none;}
+
 @media screen and (max-width: 1670px){
 	.aboutContent {margin-bottom: 20px;}
 	.aboutContentText {width: 300px;}
@@ -296,6 +298,7 @@ box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);}
 	.aboutContentText {margin: 0px;}
 	.aboutContentText p {display: none;}
 	.mobileExtraButtonOn {display: inline;}
+	.mobile {display: initial;}
 }
 
 @media screen and (max-width: 500px){
