@@ -65,7 +65,7 @@ z-index: 1;}
 
 #topNav {position: fixed;
 z-index: 2;
-background-color: rgba(240,240,240,0.9);
+background-color: rgba(240,240,240,0.95);
 font-size: 2em;
 margin-left: 15px;
 margin-top: 10px;
@@ -113,17 +113,14 @@ padding-top: 12px;
 text-decoration: none;
 display: block;
 transition: 0.4s;
-color: #51A66E;
-text-shadow: -1px 2px 3px rgba(0,0,0,0.3);}
+color: #51A66E;}
 
 .sidenav ul li a:hover {color: #2EB532;
 transition: 0.25s ease;}
 
-.sidenav ul li {display: block;}
-
 .sidenav ul {position: absolute;
 top: 24%;
-left: 40px;}
+left: 30px;}
 
 .sidenav ul li .fas {font-size: .85em;}
 
@@ -139,12 +136,21 @@ text-shadow: -1px 2px 3px rgba(0,0,0,0.2);}
 .sidenav .closebtn:hover {color: #2EB532;
 transition: 0.25s ease;}
 
+#curtain {width: 100%;
+height: 100%;
+position: fixed;
+left: 250px;
+z-index: 1;
+background-color: rgba(0,0,0,0.0);
+transition: 0.4s;
+display: none;}
+
 #mobLang {margin-bottom: 20px;
 display: flex;
 position: absolute;
 top: 0;
 right: 0;
-text-shadow: -1px 2px 3px rgba(0,0,0,0.2);}
+font-weight: bold;}
 
 #mobLang a {text-align: center;
 padding: 8px 10px 10px 10px;}
@@ -175,6 +181,42 @@ box-shadow: 0px -10px 50px 0px rgba(0,0,0,0.05);}
 #hText p {font-size: 1.3em;
 width: 75%;}
 
+#about {width: 80%;
+margin: auto;}
+
+#aboutIntro {margin-bottom: 30px;}
+
+#aboutIntro h1 {font-size: 2.3em;}
+
+#aboutIntro p {font-size: 1.4em;}
+
+#aboutContainter {display: flex;
+flex-wrap: wrap;
+margin: auto;
+justify-content: space-around;}
+
+.aboutContent {flex-basis: 33%;
+display: flex;
+justify-content: center;}
+
+.aboutContentText {margin:0px 0px 0px 20px;}
+
+.aboutContent img {border-radius: 50%;
+width: 175px;
+height: 175px;}
+
+.aboutContentText h2 {margin-top: 0px;
+font-size: 1.75em;}
+
+.aboutContentText p {font-size: 1.1em;}
+
+@media screen and (max-width: 1670px){
+	.aboutContent {margin-bottom: 20px;}
+	.aboutContentText {width: 330px;}
+	.aboutContent img {height: 160px;
+	width: 160px;}
+}
+
 @media screen and (max-width: 1280px){
 	.langContent {width: 4.2em;}
 	#topNav {font-size: 1.5em;}
@@ -187,6 +229,12 @@ width: 75%;}
 	#hText h2 {font-size: 2em;}
 	#hText p {font-size: 1.2em;
 	width: 100%;}
+	#about {width: 95%;}
+	#aboutIntro h1 {font-size: 2em;}
+	#aboutIntro p {font-size: 1.2em;}
+	.aboutContentText {width: 300px;}
+	.aboutContent img {height: 140px;
+	width: 140px;}
 }
 
 @media screen and (max-width: 992px){
@@ -208,8 +256,11 @@ width: 75%;}
 	#hText h2 {font-size: 1.5em;
 	text-align: center;}
 	#hText p {text-align: center;}
+	.aboutContent {flex: 1;
+	flex-basis: 100%;}
+	.aboutContentText {width: 100%;}
 }
-
+	
 @media screen and (max-width: 768px){
 	#logo img {width: 200px;
 	height: 64px;}
@@ -217,10 +268,12 @@ width: 75%;}
 	margin: 0 15px 0 0;}
 	#hText {width: 100%;
 	border-radius: 0px;}
+	.aboutContentText p {font-size: 1em;}
+	.aboutContentText h2 {font-size: 1.5em;}
 }
 
 @media screen and (max-height: 450px){
-	.sidenav ul li a {font-size: 1.5em;}
-	.sidenav ul {left: 55px;
+	.sidenav ul li a {font-size: 1.6em;}
+	.sidenav ul {left: 40px;
 	top: 17%}
 }

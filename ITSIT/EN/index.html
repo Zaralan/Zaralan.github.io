@@ -12,6 +12,7 @@
   function enableScroll() {document.body.removeEventListener('touchstart', function(e){e.preventDefault();});}
   function disableOverflow() {document.getElementById("BODY").style.overflow = "hidden";}
   function enableOverflow() {document.getElementById("BODY").style.overflow = "visible";}
+  function showCurtain() {document.getElementById("curtain").style.display = "block";} function hideCurtain() {document.getElementById("curtain").style.display = "none";}
 </script>
 <script src="https://kit.fontawesome.com/ed9239fef9.js" crossorigin="anonymous"></script>
 </head>
@@ -21,7 +22,7 @@
   <header id="home">
     <nav id="topNav">
       <ul>
-        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#home"><i class="fas fa-home"></i> Main</a></li>
         <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
         <li><a href="#courses"><i class="fas fa-chalkboard-teacher"></i> Courses</a></li>
         <li><a href="#news"><i class="fas fa-bell"></i> News</a></li>
@@ -32,28 +33,74 @@
         </div>
       </ul>
     </nav>
-    <i class="fas fa-bars" id="mobNav" onClick="openNav(); disableScroll(); disableOverflow();"></i>
-    <nav id="sideNav" class="sidenav"> <i class="fas fa-bars closebtn" onClick="closeNav(); enableScroll(); enableOverflow();"></i>
+    <i class="fas fa-bars" id="mobNav" onClick="openNav(); disableScroll(); disableOverflow(); showCurtain();"></i>
+    <nav id="sideNav" class="sidenav"> <i class="fas fa-bars closebtn" onClick="closeNav(); enableScroll(); enableOverflow();  hideCurtain();"></i>
       <ul>
-		<li><a href="#home" onclick="closeNav(); enableScroll(); enableOverflow();"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="#about" onclick="closeNav(); enableScroll(); enableOverflow();"><i class="fas fa-info-circle"></i> About</a></li>
-        <li><a href="#courses" onclick="closeNav(); enableScroll(); enableOverflow();"><i class="fas fa-chalkboard-teacher"></i> Courses</a></li>
-        <li><a href="#news" onclick="closeNav(); enableScroll(); enableOverflow();"><i class="fas fa-bell"></i> News</a></li>
-        <li><a href="#contacts" onclick="closeNav(); enableScroll(); enableOverflow();"><i class="fas fa-address-card"></i> Contacts</a></li>
+        <li><a href="#home" onclick="closeNav(); enableScroll(); enableOverflow(); hideCurtain();"><i class="fas fa-home"></i> Main</a></li>
+        <li><a href="#about" onclick="closeNav(); enableScroll(); enableOverflow(); hideCurtain();"><i class="fas fa-info-circle"></i> About</a></li>
+        <li><a href="#courses" onclick="closeNav(); enableScroll(); enableOverflow(); hideCurtain();"><i class="fas fa-chalkboard-teacher"></i> Courses</a></li>
+        <li><a href="#news" onclick="closeNav(); enableScroll(); enableOverflow(); hideCurtain();"><i class="fas fa-bell"></i> News</a></li>
+        <li><a href="#contacts" onclick="closeNav(); enableScroll(); enableOverflow(); hideCurtain();"><i class="fas fa-address-card"></i> Contacts</a></li>
       </ul>
       <div id="mobLang"> <a href="./index.html"><span class="langIcon EN"></span> EN</a> <a href="../index.html"><span class="langIcon RU"></span>RU</a> </div>
     </nav>
+    <div id="curtain" onClick="closeNav(); enableScroll(); enableOverflow();  hideCurtain();"></div>
     <div id="logo"> <img src="../Assets/Graphics/MainLogo.png" alt="Institute of Transport Service and Tourism Logo">
       <h1>Institute of Transport<br>
         Service and Tourism</h1>
     </div>
     <div id="hText">
-      <h2>We do not choose the best students,<br>
+      <h2>We don't choose the best students -<br>
         We make everyone the best.</h2>
-      <p>Институт Транспорта, Сервиса и Туризма Нижегородской Области предоставляет высококачественное высшее образование по специальностям Сервиса и Технического обслуживания на бюджетной или доступной контрактной основе для всех желающих. Набор на следующий год обучения проводится уже сейчас!</p>
+      <p>The Institute of Transport, Service and Tourism of the Nizhny Novgorod Region provides high-quality higher education in the fields of Tourism and Technical Services with funding options or for an affrodable price. Registration for next year is already open, everyone is accepted!</p>
     </div>
   </header>
-  <main></main>
+  <main>
+    <section id="about">
+      <div id="aboutIntro">
+        <h1>About</h1>
+        <p>Институт Транспорта Сервиса и туризма был открыт в 2011 году и является частью Княгинского Университета. Институт регулярно проводит студенческие праздники, конкурсы и фестивали. Каждое лето собираются команды для работы и отдыха в Ялте и Анапе. Есть своя команда КВН, являющаяся чемпионом университета. Иногородним студентам предоставляется удобное общежитие. Также мы предоставляем:</p>
+      </div>
+      <div id="aboutContainter">
+        <div class="aboutContent"> <img src="http://placekitten.com/200/200" alt="">
+          <div class="aboutContentText">
+            <h2>Education</h2>
+            <p>ИТСиТ проводит обучение студентов на базе высшего и среднего специального образования в очном или заочном режиме обучения по направлениям транспорта и сервиса. Подробнее с направлениями вы можете ознакомиться в секции Кафедры.</p>
+          </div>
+        </div>
+        <div class="aboutContent"> <img src="http://placekitten.com/200/200" alt="">
+          <div class="aboutContentText">
+            <h2>Sports</h2>
+            <p>Наши студенты имеют возможность посещать тренажёрный зал, каток, бассейн и различные спортивные секции, включая дзюдо, самбо, сумо, баскетбол, волейбол, плавание, футбол, хоккей, шорт-трек, гимнастику, аквааэробику, бодибилдинг, пауэрлифтинг, гиревой спорт и армрестлинг.</p>
+          </div>
+        </div>
+        <div class="aboutContent"> <img src="http://placekitten.com/200/200" alt="">
+          <div class="aboutContentText">
+            <h2>Scholar life</h2>
+            <p>Дважды в год – осенью и весной – в институте проводятся международные научно-практические конференции для молодых учёных и студентов. Также есть возможность участия в профессиональных конкурсах, олимпиадах и научно-практических конференциях.</p>
+          </div>
+        </div>
+        <div class="aboutContent"><img src="http://placekitten.com/200/200" alt="">
+          <div class="aboutContentText">
+            <h2>Field labs</h2>
+            <p>В институте имеется лабораторный комплекс рекреационного туризма и гостеприимства, в состав которого входит теплоход ПС-172, являющийся базой для проведения учебных практик.</p>
+          </div>
+        </div>
+        <div class="aboutContent"><img src="http://placekitten.com/200/200" alt="">
+          <div class="aboutContentText">
+            <h2>Library</h2>
+            <p>В фонде библиотеки института представлено больше 22 тысяч книг. Список включает в себя учебные материалы, научные издания, а также художественную литературу. Студенты имеют доступ к электронным библиотечным системам и справочникам.</p>
+          </div>
+        </div>
+        <div class="aboutContent"><img src="http://placekitten.com/200/200" alt="">
+          <div class="aboutContentText">
+            <h2>Extra</h2>
+            <p>Студенты могут пройти обучение по дополнительным специальностям электрогазосварщика и водителя категорий «В» и «С». Также студенты института имеют возможность пройти стажировку в Германии или Польше.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
   <footer></footer>
 </div>
 </body>
