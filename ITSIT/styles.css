@@ -183,17 +183,18 @@ width: 75%;}
 
 #about {width: 80%;
 margin: auto;
+margin-bottom: 50px;
 background-color: rgba(255,255,255,0.5);
 padding: 20px;
 margin-top: 30px;
 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);}
 
-#aboutIntro {margin-bottom: 50px;}
+.intro {margin-bottom: 50px;}
 
-#aboutIntro h1 {font-size: 2.3em;
+.intro h1 {font-size: 2.3em;
 margin-top: 0px;}
 
-#aboutIntro p {font-size: 1.4em;}
+.intro p {font-size: 1.4em;}
 
 #aboutContainter {display: flex;
 flex-wrap: wrap;
@@ -228,10 +229,78 @@ box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.2);}
 
 .aboutMobileExtra {display: none;
 padding: 10px;
-margin-bottom: 20px;
+margin: -10px 0px 20px 0px;
 box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);}
 
 .mobile {display: none;}
+
+#courses {width: 80%;
+margin: auto;
+margin-bottom: 50px;
+padding: 20px;}
+
+#coursesContainer {display: flex;
+justify-content: space-around;
+flex-wrap: wrap;}
+
+#courses .vLine {width: 2px;
+background-color: #041205;}
+
+.coursesVideoContainer {display: flex;
+width: 35vw;
+height: 19.7vw;
+justify-content: center;
+text-align: center;
+flex-direction: column;}
+
+.coursesVideoContainer .coursesVideo {width: 35vw;
+height: 19.7vw;
+position: relative;}
+
+.coursesVideoContainer h2 {font-size: 2.5em;
+position: absolute;
+z-index: 1;
+margin: 0 auto;
+width: 35vw;
+color: #F0F0F0;
+cursor: pointer;}
+
+.coursesVideoContainer .fade {background-color: rgba(0,0,0,0.8);
+position: absolute;
+height: 19.7vw;
+width: 35vw;
+transition: background-color 0.3s ease;
+display: flex;
+justify-content: center;
+text-align: center;
+flex-direction: column;}
+
+.coursesVideoContainer .fade:hover {background-color: rgba(0,0,0,0.7);
+transition: background-color 0.3s ease;
+cursor: pointer;}
+
+.coursesContent ul {list-style: none;
+padding: 0px;
+margin-left: 10px;}
+
+.coursesContent button {float: right;
+background-color: #51A66E;
+color: #F0F0F0;
+border: none;
+padding: 10px;
+font-size: 1.1em;
+border-radius: 3px;
+box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.2);
+transition: 0.3s ease;
+cursor: pointer;}
+
+.coursesContent button:hover {background-color: #2EB532;
+transition: 0.3s ease;}
+
+.coursesContent button .fas {font-size: 1.1em;
+margin-left: 5px;}
+
+.coursesContent button .fa-caret-up {display: none;}
 
 @media screen and (max-width: 1670px){
 	.aboutContent {margin-bottom: 20px;}
@@ -253,11 +322,13 @@ box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);}
 	#hText p {font-size: 1.2em;
 	width: 100%;}
 	#about {width: 95%;}
-	#aboutIntro h1 {font-size: 2em;}
-	#aboutIntro p {font-size: 1.2em;}
+	.intro h1 {font-size: 2em;}
+	.intro p {font-size: 1.2em;}
 	.aboutContentText {width: 280px;}
 	.aboutContent img {height: 140px;
 	width: 140px;}
+	#courses {width: 95%;}
+	.coursesVideoContainer h2 {font-size: 2em;}
 }
 
 @media screen and (max-width: 992px){
@@ -272,8 +343,9 @@ box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);}
 	position: fixed;
 	top: 0;
 	left: 0;
-	padding: 5px 30px 30px 10px;
-	text-shadow: -1px 2px 3px rgba(0,0,0,0.2);
+	padding: 6px 10px 10px 10px;
+	background-color: rgba(241,241,241,.95);
+	box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
 	color: #51A66E;
 	cursor: pointer;}
 	#hText h2 {font-size: 1.5em;
@@ -283,6 +355,23 @@ box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);}
 	flex-basis: 100%;}
 	.aboutContentText {width: 100%;}
 	.aboutContent img {order: 2;}
+	#coursesContainer {display: block;}
+	.coursesContent {margin-bottom: 30px;}
+	.coursesVideoContainer {width: 80vw;
+	height: 45vw;
+	margin: auto;}
+	.coursesVideoContainer .coursesVideo {width: 80vw;
+	height: 45vw;}
+	.coursesVideoContainer h2 {width: 80vw;
+	font-size: 2.5em;}
+	.coursesVideoContainer .fade {width: 80vw;
+	height: 45vw;}
+	.coursesContent ul {text-align: center;
+	margin: 0;}
+	.coursesContent button {float: none;
+	display: block;
+	margin: auto;}
+	.coursesContent button .fa-caret-right {display: none;}
 }
 	
 @media screen and (max-width: 768px){
@@ -292,8 +381,8 @@ box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);}
 	margin: 0 15px 0 0;}
 	#hText {width: 100%;
 	border-radius: 0px;}
-	#aboutIntro h1 {font-size: 1.6em;}
-	#aboutIntro p {font-size: 1.05em;}
+	.intro h1 {font-size: 1.6em;}
+	.intro p {font-size: 1.05em;}
 	.aboutContentText h2 {font-size: 1.4em;}
 	.aboutContentText {margin: 0px;}
 	.aboutContentText p {display: none;}
@@ -304,6 +393,8 @@ box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);}
 @media screen and (max-width: 500px){
 	.aboutContent img {height: 20vw;
 	width: 20vw;}
+	.coursesVideoContainer h2 {font-size: 1.9em;
+	width: 80vw;}
 }
 
 @media screen and (max-height: 450px){
