@@ -372,6 +372,7 @@ margin-left: 5px;}
 	display: block;
 	margin: auto;}
 	.coursesContent button .fa-caret-right {display: none;}
+	.coursesContent button .fa-caret-up {display: inline;}
 }
 	
 @media screen and (max-width: 768px){
