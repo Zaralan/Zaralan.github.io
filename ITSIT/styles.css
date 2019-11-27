@@ -91,7 +91,15 @@ transform-origin: center;}
 
 #topNav .fas {font-size: .85em;}
 
-#mobNav {display: none;}
+#mobNav {display: none;
+font-size: 2em;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 2;
+padding: 6px 10px 10px 10px;
+color: #2EB532;
+cursor: pointer;}
 
 .sidenav {display: none;
 position: fixed;
@@ -130,11 +138,7 @@ left: 0;
 padding: 6px 30px 30px 10px;
 font-size: 2em;
 cursor: pointer;
-color: #51A66E;
-text-shadow: -1px 2px 3px rgba(0,0,0,0.2);}
-
-.sidenav .closebtn:hover {color: #2EB532;
-transition: 0.25s ease;}
+color: #2EB532;}
 
 #curtain {width: 100%;
 height: 100%;
@@ -284,7 +288,13 @@ cursor: pointer;}
 padding: 0px;
 margin-left: 10px;}
 
-.coursesContent button {float: right;
+.coursesContent ul li {width: 35vw;}
+
+.coursesContent {display: flex;
+flex-direction: column;
+justify-content: space-between;}
+
+.coursesContent button {align-self: flex-end;
 background-color: #51A66E;
 color: #F0F0F0;
 border: none;
@@ -301,7 +311,73 @@ transition: 0.3s ease;}
 .coursesContent button .fas {font-size: 1.1em;
 margin-left: 5px;}
 
-.coursesContent button .fa-caret-up {display: none;}
+#coursesExtraInfo {display: none;
+position: fixed;
+z-index: 1;
+padding-top: 5vw;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0,0,0,0.4);}
+
+.modalContent {position: relative;
+background-color: #fefefe;
+margin: auto;
+margin-bottom: 30px;
+padding: 0px 0px 5px 0px;
+width: 80%;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+-webkit-animation-name: modalAnima;
+-webkit-animation-duration: 0.4s;
+animation-name: modalAnima;
+animation-duration: 0.4s;}
+
+.modalHead {background-color: #51A66E;
+color: #F0F0F0;
+padding-bottom: 10px;}
+
+.modalHead h2 {margin: -35px 0px 10px 0px;
+text-align: center;
+font-size: 2em;}
+
+.modalHead #closeModal {font-size: 2em;
+text-align: right;
+display: block;
+padding: 8px 17px 15px 15px;
+margin: 0px;
+cursor: pointer;
+transition: color 0.2s ease;}
+
+.modalHead #closeModal:hover {color: #C9FFCA;
+transition: color 0.2s ease;}
+
+.modalBody h3 {margin: 15px 0px 15px 0px;}
+
+.modalBody ul {margin: 0px;
+font-size: 1.2em;}
+
+.modalBody ul li {line-height: 1.45em;}
+
+.modalBody ul:last-child {margin-bottom: 15px;}
+
+.modalBody p {margin-left: 10px;
+font-size: 1.1em;}
+
+#serviceModal, #serviceModalHeader {display: none;}
+
+#techModal, #techModalHeader {display: none;}
+
+@-webkit-keyframes modalAnima {
+  from {left: -100px; opacity:0} 
+  to {left:0; opacity:1}
+}
+
+@-webkit-keyframes modalAnima {
+  from {left: -100px; opacity:0} 
+  to {left:0; opacity:1}
+}
 
 @media screen and (max-width: 1670px){
 	.aboutContent {margin-bottom: 20px;}
@@ -330,6 +406,9 @@ margin-left: 5px;}
 	width: 140px;}
 	#courses {width: 95%;}
 	.coursesVideoContainer h2 {font-size: 2em;}
+	.modalBody ul {margin: 0px;
+	font-size: 1.1em;}
+	.modalBody ul li {line-height: 1.3em;}
 }
 
 @media screen and (max-width: 992px){
@@ -339,17 +418,7 @@ margin-left: 5px;}
 	margin-bottom: 5px;}
 	.sidenav {display: block;}
 	#topNav {display: none;}
-	#mobNav {display: block;
-	font-size: 2em;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 2;
-	padding: 6px 10px 10px 10px;
-	background-color: rgba(241,241,241,.95);
-	box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
-	color: #51A66E;
-	cursor: pointer;}
+	#mobNav {display: block;}
 	#hText h2 {font-size: 1.5em;
 	text-align: center;}
 	#hText p {text-align: center;}
@@ -358,7 +427,8 @@ margin-left: 5px;}
 	.aboutContentText {width: 100%;}
 	.aboutContent img {order: 2;}
 	#coursesContainer {display: block;}
-	.coursesContent {margin-bottom: 30px;}
+	.coursesContent {margin-bottom: 30px;
+	display: block;}
 	.coursesVideoContainer {width: 80vw;
 	height: 45vw;
 	margin: auto;}
@@ -368,13 +438,14 @@ margin-left: 5px;}
 	font-size: 2.5em;}
 	.coursesVideoContainer .fade {width: 80vw;
 	height: 45vw;}
-	.coursesContent ul {text-align: center;
-	margin: 0;}
-	.coursesContent button {float: none;
-	display: block;
+	.coursesContent ul li {width: 80vw;
 	margin: auto;}
-	.coursesContent button .fa-caret-right {display: none;}
-	.coursesContent button .fa-caret-up {display: inline;}
+	.coursesContent button {display: block;
+	margin: auto;}
+	.modalHead h2 {font-size: 1.6em;}
+	.modalHead #closeModal {font-size: 1.6em;}
+	.modalBody ul {font-size: 1.1em;}
+	.modalBody h3 {font-size: 1.1em;}
 }
 	
 @media screen and (max-width: 768px){
@@ -391,6 +462,8 @@ margin-left: 5px;}
 	.aboutContentText p {display: none;}
 	.mobileExtraButtonOn {display: inline;}
 	.mobile {display: initial;}
+	.modalContent {width: 90%;}
+	.modalBody ul {padding-left: 30px;}
 }
 
 @media screen and (max-width: 500px){
@@ -398,6 +471,8 @@ margin-left: 5px;}
 	width: 20vw;}
 	.coursesVideoContainer h2 {font-size: 1.9em;
 	width: 80vw;}
+	.modalHead h2 {font-size: 1em;}
+	.modalBody h3 {margin: 10px 0px 10px 0px;}
 }
 
 @media screen and (max-height: 450px){

@@ -49,6 +49,15 @@
   function hideAddExtra() {document.getElementById("addExtra").style.display = "none";}
   function showAddExtraButtonOn() {document.getElementById("addExtraButtonOn").style.display = "inline";}
   function hideAddExtraButtonOff() {document.getElementById("addExtraButtonOff").style.display = "none";}
+  function openCoursesExtraInfo() {document.getElementById("coursesExtraInfo").style.display = "block";}
+  function showServiceModal() {document.getElementById("serviceModal").style.display = "block";}
+  function closeServiceModal() {document.getElementById("serviceModal").style.display = "none";}
+  function showTechModal() {document.getElementById("techModal").style.display = "block";}
+  function closeTechModal() {document.getElementById("techModal").style.display = "none";}
+  function showServiceModalHeader() {document.getElementById("serviceModalHeader").style.display = "block";}
+  function closeServiceModalHeader() {document.getElementById("serviceModalHeader").style.display = "none";}
+  function showTechModalHeader() {document.getElementById("techModalHeader").style.display = "block";}
+  function closeTechModalHeader() {document.getElementById("techModalHeader").style.display = "none";}
 </script>
 <script src="https://kit.fontawesome.com/ed9239fef9.js" crossorigin="anonymous"></script>
 </head>
@@ -189,22 +198,25 @@
             <video class="coursesVideo" autoplay muted loop>
               <source src="./Assets/Videos/videoService.mp4" type ="video/mp4">
             </video>
-            <div class="fade">
+            <div class="fade" onClick="openCoursesExtraInfo(); disableOverflow(); disableScroll(); showServiceModal(); showServiceModalHeader();">
               <h2>Сервис и Туризм</h2>
             </div>
           </div>
           <ul>
             <li>
               <h3>43.02.10. Туризм</h3>
+              <p>Средне-специальное образование с углублением в изучение Сервиса и Туризма.</p>
             </li>
             <li>
               <h3>43.03.01. Сервис</h3>
+              <p>Высшее образование уровня Бакалавра в направлениях Сервиса и Туризма с углублением в индустрию Сервиса.</p>
             </li>
             <li>
               <h3>38.04.02. Менеджмент</h3>
+              <p>Высшее образование уровня Магистра в направлениях Сервиса, Туризма и Менеджмента.</p>
             </li>
           </ul>
-          <button>Подробнее <i class="fas fa-caret-up"></i><i class="fas fa-caret-right"></i></button>
+          <button onClick="openCoursesExtraInfo(); disableOverflow(); disableScroll(); showServiceModal(); showServiceModalHeader();">Подробнее <i class="fas fa-caret-right"></i></button>
         </div>
         <div class="vLine"></div>
         <div class="coursesContent Tech">
@@ -212,27 +224,118 @@
             <video class="coursesVideo" autoplay muted loop>
               <source src="./Assets/Videos/videoTech.mp4" type ="video/mp4">
             </video>
-            <div class="fade">
+            <div class="fade" onClick="openCoursesExtraInfo(); disableOverflow(); disableScroll(); showTechModal(); showTechModalHeader();">
               <h2>Тех. Обслуживание</h2>
             </div>
           </div>
           <ul>
             <li>
               <h3>23.02.03. Тех. Обслуживание</h3>
+              <p>Средне-специальное образование с углублением в изучение Технического Обслуживания.</p>
             </li>
             <li>
               <h3>23.03.03. Эксплуатация машин</h3>
+              <p>Высшее образование уровня Бакалавра в направлении Технического обслуживания и Эксплуатации машин.</p>
             </li>
             <li>
               <h3>35.04.06. Агроинженерия</h3>
+              <p>Высшее образование уровня Магистра в направлении Технического обслуживания в области Агроинженерии.</p>
             </li>
           </ul>
-          <button>Подробнее <i class="fas fa-caret-up"></i><i class="fas fa-caret-right"></i></button>
+          <button onClick="openCoursesExtraInfo(); disableOverflow(); disableScroll(); showTechModal(); showTechModalHeader();">Подробнее <i class="fas fa-caret-right"></i></button>
+        </div>
+      </div>
+      <div id="coursesExtraInfo">
+        <div class="modalContent">
+          <div class="modalHead">
+			<i id="closeModal" class="fas fa-times"></i>
+            <h2 id="serviceModalHeader">Кафедра Сервиса и Туризма</h2>
+            <h2 id="techModalHeader">Кафедра Тех. Обслуживания</h2>
+          </div>
+          <div class="modalBody" id="serviceModal">
+            <ul>
+              <h3>43.02.10. Туризм</h3>
+              <li><strong>База:</strong> Общее образование</li>
+              <li><strong>Для поступления:</strong> Диплом об окончании 9 классов</li>
+              <li><strong>Тип обучения:</strong> Бюджетные места</li>
+              <li><strong>Срок и форма обучения:</strong> 2 года 10 месяцев очно</li>
+              <li><strong>Квалификация:</strong> Специалист по туризму</li>
+            </ul>
+            <ul>
+              <h3>3.03.01. Сервис</h3>
+              <li><strong>База:</strong> Среднее и Средне-специальное образование</li>
+              <li><strong>Для поступления:</strong> ЕГЭ (внутренние экзамены) по русскому языку, математике и обществознанию</li>
+              <li><strong>Тип обучения:</strong> Бюджетные места, Контрактные места (от 25 тыс. р. в год)</li>
+              <li><strong>Срок и форма обучения:</strong> 4 года очно, 5 лет заочно</li>
+              <li><strong>Квалификация:</strong> Бакалавр</li>
+            </ul>
+            <ul>
+              <h3>38.04.02 Менеджмент</h3>
+              <li><strong>База:</strong> Диплом Бакалавра</li>
+              <li><strong>Для поступления:</strong> Экзамен по математике и проф. дисциплине</li>
+              <li><strong>Тип обучения:</strong> Бюджетные места</li>
+              <li><strong>Срок и форма обучения:</strong> 2 года очно</li>
+              <li><strong>Квалификация:</strong> Магистр</li>
+              <li><strong>Профиль:</strong> Менеджмент в гостиничном, экскурсионном и ресторанном бизнесе</li>
+            </ul>
+			<p>По окончанию обучения студенты могут устроиться менеджерами или консультантами в туристических фирмах или агентствах; администраторами в отелях и гостиницах; гидами; экскурсоводами; организаторами досуга; аниматорами; вожатыми; руководителями гостиничных предприятий и предприятий общественного питания; топ-менеджерами в развлекательных и физкультурно-оздоровительных комплексах, рекреационном и туристическом бизнесе.</p>
+          </div>
+          <div class="modalBody" id="techModal">
+			 <ul>
+              <h3>23.02.03. Тех. Обслуживание</h3>
+              <li><strong>База:</strong> Общее образование</li>
+              <li><strong>Для поступления:</strong> Диплом об окончании 9 классов</li>
+              <li><strong>Тип обучения:</strong> Бюджетные места</li>
+              <li><strong>Срок и форма обучения:</strong> 2 года 10 месяцев очно</li>
+              <li><strong>Квалификация:</strong> Техник</li>
+            </ul>
+            <ul>
+              <h3>3.03.01. Сервис</h3>
+              <li><strong>База:</strong> Среднее и Средне-специальное образование</li>
+              <li><strong>Для поступления:</strong> ЕГЭ (внутренние экзамены) по русскому языку, математике и физике</li>
+              <li><strong>Тип обучения:</strong> Бюджетные места, Контрактные места (от 25 тыс. р. в год)</li>
+              <li><strong>Срок и форма обучения:</strong> 4 года очно, 5 лет заочно</li>
+              <li><strong>Квалификация:</strong> Бакалавр</li>
+            </ul>
+            <ul>
+              <h3>38.04.02 Менеджмент</h3>
+              <li><strong>База:</strong> Диплом Бакалавра</li>
+              <li><strong>Для поступления:</strong> Экзамен по математике и проф. дисциплине</li>
+              <li><strong>Тип обучения:</strong> Бюджетные места</li>
+              <li><strong>Срок и форма обучения:</strong> 2 года очно</li>
+              <li><strong>Квалификация:</strong> Магистр</li>
+              <li><strong>Профиль:</strong> Эксплуатация машин и оборудования</li>
+            </ul>
+		  </div>
         </div>
       </div>
     </section>
   </main>
   <footer></footer>
 </div>
+<script>
+	var modal = document.getElementById("coursesExtraInfo");
+	window.onclick = function(event) {
+	  if (event.target == modal) {
+		modal.style.display = "none";
+		document.body.removeEventListener('touchstart', function(e){e.preventDefault();});
+	    document.getElementById("BODY").style.overflow = "visible";
+		document.getElementById("serviceModal").style.display = "none";
+		document.getElementById("techModal").style.display = "none";
+		document.getElementById("serviceModalHeader").style.display = "none";
+		document.getElementById("techModalHeader").style.display = "none";
+	  }
+	}
+	var close = document.getElementById("closeModal");
+	close.onclick = function() {
+	  modal.style.display = "none";
+	  document.body.removeEventListener('touchstart', function(e){e.preventDefault();});
+	  document.getElementById("BODY").style.overflow = "visible";
+	  document.getElementById("serviceModal").style.display = "none";
+      document.getElementById("techModal").style.display = "none";
+	  document.getElementById("serviceModalHeader").style.display = "none";
+	  document.getElementById("techModalHeader").style.display = "none";
+	}
+</script>
 </body>
 </html>
