@@ -10,7 +10,7 @@ body {background-color: #F0F0F0;
 color: #041205;
 margin: 0px;
 padding: 0px;
-font-family: century gothic, verdana, arial, sans-serif;
+font-family: 'Open Sans', Century Gothic, Arial, sans-serif;
 height: 100%;
 -ms-overflow-style: none;}
 
@@ -261,10 +261,9 @@ flex-direction: column;}
 height: 19.7vw;
 position: relative;}
 
-.fade h2 {font-size: 2.5em;
+.fade h2 {font-size: 3em;
 margin: 0 auto;
 width: 35vw;
-color: #F0F0F0;
 cursor: pointer;
 position: absolute;
 z-index: 1;}
@@ -273,15 +272,17 @@ z-index: 1;}
 position: absolute;
 height: 19.7vw;
 width: 35vw;
-transition: background-color 0.3s ease;
+transition: color, background 0.3s ease;
 display: flex;
 justify-content: center;
 text-align: center;
 flex-direction: column;
-z-index: 1;}
+z-index: 1;
+color: #F0F0F0;}
 
 .coursesVideoContainer .fade:hover {background-color: rgba(0,0,0,0.7);
-transition: background-color 0.3s ease;
+color: #FFF;
+transition: color, background 0.3s ease;
 cursor: pointer;}
 
 .coursesContent ul {list-style: none;
@@ -323,7 +324,7 @@ overflow: auto;
 background-color: rgba(0,0,0,0.4);}
 
 .modalContent {position: relative;
-background-color: #fefefe;
+background-color: #FAFAFA;
 margin: auto;
 margin-bottom: 30px;
 padding: 0px 0px 5px 0px;
@@ -335,34 +336,26 @@ animation-name: modalAnima;
 animation-duration: 0.4s;}
 
 .modalHead {background-color: #51A66E;
-color: #F0F0F0;
-padding-bottom: 10px;}
+color: #F0F0F0;}
 
-.modalHead h2 {margin: -35px 0px 10px 0px;
+.modalHead h2 {padding: 20px 0px 20px 10px;
 text-align: center;
 font-size: 2em;}
 
 .modalHead #closeModal {font-size: 2em;
-text-align: right;
-display: block;
-padding: 8px 17px 15px 15px;
-margin: 0px;
-cursor: pointer;
-transition: color 0.2s ease;}
-
-.modalHead #closeModal:hover {color: #C9FFCA;
-transition: color 0.2s ease;}
+float: right;
+padding-right: 10px;
+margin-top: 5px;
+cursor: pointer;}
 
 .modalBody h3 {margin: 15px 0px 15px 0px;}
 
-.modalBody ul {margin: 0px;
-font-size: 1.2em;}
+.modalBody ul {font-size: 1.2em;}
 
-.modalBody ul li {line-height: 1.45em;}
+.modalBody ul li {line-height: 1.45em;
+margin-right: 10px;}
 
-.modalBody ul:last-child {margin-bottom: 15px;}
-
-.modalBody p {margin-left: 10px;
+.modalBody p {margin: 15px;
 font-size: 1.1em;}
 
 #serviceModal, #serviceModalHeader {display: none;}
@@ -384,14 +377,14 @@ font-size: 1.1em;}
 	.aboutContentText {width: 300px;}
 	.aboutContent img {height: 160px;
 	width: 160px;}
+	.fade h2 {font-size: 2.5em;}
 }
 
 @media screen and (max-width: 1280px){
 	.langContent {width: 4.2em;}
 	#topNav {font-size: 1.5em;}
 	#logo h1 {font-size: 1.8em;
-	margin: 0 20px 0 0;
-	font-weight: bold;}
+	margin: 0 20px 0 0;}
 	#logo img {width: 300px;
 	height: 96px;}
 	#hText {width: 70%}
@@ -405,9 +398,8 @@ font-size: 1.1em;}
 	.aboutContent img {height: 140px;
 	width: 140px;}
 	#courses {width: 95%;}
-	.coursesVideoContainer h2 {font-size: 2em;}
-	.modalBody ul {margin: 0px;
-	font-size: 1.1em;}
+	.fade h2 {font-size: 1.7em;}
+	.modalBody ul {font-size: 1.1em;}
 	.modalBody ul li {line-height: 1.3em;}
 }
 
@@ -434,7 +426,7 @@ font-size: 1.1em;}
 	margin: auto;}
 	.coursesVideoContainer .coursesVideo {width: 80vw;
 	height: 45vw;}
-	.coursesVideoContainer h2 {width: 80vw;
+	.fade h2 {width: 80vw;
 	font-size: 2.5em;}
 	.coursesVideoContainer .fade {width: 80vw;
 	height: 45vw;}
@@ -442,10 +434,8 @@ font-size: 1.1em;}
 	margin: auto;}
 	.coursesContent button {display: block;
 	margin: auto;}
-	.modalHead h2 {font-size: 1.6em;}
-	.modalHead #closeModal {font-size: 1.6em;}
 	.modalBody ul {font-size: 1.1em;}
-	.modalBody h3 {font-size: 1.1em;}
+	.modalBody h3 {margin: 25px;}
 }
 	
 @media screen and (max-width: 768px){
@@ -462,17 +452,19 @@ font-size: 1.1em;}
 	.aboutContentText p {display: none;}
 	.mobileExtraButtonOn {display: inline;}
 	.mobile {display: initial;}
-	.modalContent {width: 90%;}
-	.modalBody ul {padding-left: 30px;}
+	.fade h2 {font-size: 2em;}
+	.modalHead h2 {font-size: 1.5em;
+	text-align: left;
+	margin-left: 30px;}
+	.modalHead #closeModal {font-size: 1.75em;}
+	.modalContent {width: 85%;}
 }
 
 @media screen and (max-width: 500px){
 	.aboutContent img {height: 20vw;
 	width: 20vw;}
-	.coursesVideoContainer h2 {font-size: 1.9em;
-	width: 80vw;}
-	.modalHead h2 {font-size: 1em;}
-	.modalBody h3 {margin: 10px 0px 10px 0px;}
+	.fade h2 {font-size: 1.5em;}
+	.modalHead h2 {font-size: 1.4em;}
 }
 
 @media screen and (max-height: 450px){

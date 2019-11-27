@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <link type="text/css" rel="stylesheet" href="../styles.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
 <title>Institute of Transport Service and Tourism</title>
 <script>
   function openNav() {document.getElementById("sideNav").style.width = "250px";}
@@ -50,6 +51,7 @@
   function showAddExtraButtonOn() {document.getElementById("addExtraButtonOn").style.display = "inline";}
   function hideAddExtraButtonOff() {document.getElementById("addExtraButtonOff").style.display = "none";}
   function openCoursesExtraInfo() {document.getElementById("coursesExtraInfo").style.display = "block";}
+  function closeCoursesExtraInfo() {document.getElementById("coursesExtraInfo").style.display = "none";}
   function showServiceModal() {document.getElementById("serviceModal").style.display = "block";}
   function closeServiceModal() {document.getElementById("serviceModal").style.display = "none";}
   function showTechModal() {document.getElementById("techModal").style.display = "block";}
@@ -78,7 +80,7 @@
         </div>
       </ul>
     </nav>
-    <i class="fas fa-bars" id="mobNav" onClick="openNav(); disableScroll(); disableOverflow(); showCurtain();"></i>
+    <i class="fas fa-bars" id="mobNav" onClick="openNav(); disableScroll(); disableOverflow(); showCurtain(); closeCoursesExtraInfo(); closeServiceModal(); closeTechModal(); closeServiceModalHeader(); closeTechModalHeader();"></i>
     <nav id="sideNav" class="sidenav"> <i class="fas fa-bars closebtn" onClick="closeNav(); enableScroll(); enableOverflow();  hideCurtain();"></i>
       <ul>
         <li><a href="#home" onclick="closeNav(); enableScroll(); enableOverflow(); hideCurtain();"><i class="fas fa-home"></i> Main</a></li>
@@ -199,7 +201,7 @@
               <source src="../Assets/Videos/videoService.mp4" type ="video/mp4">
             </video>
             <div class="fade" onClick="openCoursesExtraInfo(); disableOverflow(); disableScroll(); showServiceModal(); showServiceModalHeader();">
-              <h2>Service Department</h2>
+              <h2>Service Department <i class="fas fa-suitcase"></i></h2>
             </div>
           </div>
           <ul>
@@ -225,7 +227,7 @@
               <source src="../Assets/Videos/videoTech.mp4" type ="video/mp4">
             </video>
             <div class="fade" onClick="openCoursesExtraInfo(); disableOverflow(); disableScroll(); showTechModal(); showTechModalHeader();">
-              <h2>Tech. Department</h2>
+              <h2>Tech. Department <i class="fas fa-cogs"></i></h2>
             </div>
           </div>
           <ul>
@@ -248,12 +250,12 @@
       <div id="coursesExtraInfo">
         <div class="modalContent">
           <div class="modalHead"> <i id="closeModal" class="fas fa-times"></i>
-            <h2 id="serviceModalHeader">Кафедра Сервиса и Туризма</h2>
-            <h2 id="techModalHeader">Кафедра Тех. Обслуживания</h2>
+            <h2 id="serviceModalHeader">Service Department <i class="fas fa-suitcase"></i></h2>
+            <h2 id="techModalHeader">Tech. Department <i class="fas fa-cogs"></i></h2>
           </div>
           <div class="modalBody" id="serviceModal">
             <ul>
-              <h3>43.02.10. Туризм</h3>
+              <h3>43.02.10. Tourism</h3>
               <li><strong>База:</strong> Общее образование</li>
               <li><strong>Для поступления:</strong> Диплом об окончании 9 классов</li>
               <li><strong>Тип обучения:</strong> Бюджетные места</li>
@@ -261,7 +263,7 @@
               <li><strong>Квалификация:</strong> Специалист по туризму</li>
             </ul>
             <ul>
-              <h3>3.03.01. Сервис</h3>
+              <h3>43.03.01. Service</h3>
               <li><strong>База:</strong> Среднее и Средне-специальное образование</li>
               <li><strong>Для поступления:</strong> ЕГЭ (внутренние экзамены) по русскому языку, математике и обществознанию</li>
               <li><strong>Тип обучения:</strong> Бюджетные места, Контрактные места (от 25 тыс. р. в год)</li>
@@ -269,7 +271,7 @@
               <li><strong>Квалификация:</strong> Бакалавр</li>
             </ul>
             <ul>
-              <h3>38.04.02 Менеджмент</h3>
+              <h3>38.04.02. Management</h3>
               <li><strong>База:</strong> Диплом Бакалавра</li>
               <li><strong>Для поступления:</strong> Экзамен по математике и проф. дисциплине</li>
               <li><strong>Тип обучения:</strong> Бюджетные места</li>
@@ -281,7 +283,7 @@
           </div>
           <div class="modalBody" id="techModal">
             <ul>
-              <h3>23.02.03. Тех. Обслуживание</h3>
+              <h3>23.02.03. Tech. Maintenance</h3>
               <li><strong>База:</strong> Общее образование</li>
               <li><strong>Для поступления:</strong> Диплом об окончании 9 классов</li>
               <li><strong>Тип обучения:</strong> Бюджетные места</li>
@@ -289,7 +291,7 @@
               <li><strong>Квалификация:</strong> Техник</li>
             </ul>
             <ul>
-              <h3>3.03.01. Сервис</h3>
+              <h3>23.03.03. Tech. Operation</h3>
               <li><strong>База:</strong> Среднее и Средне-специальное образование</li>
               <li><strong>Для поступления:</strong> ЕГЭ (внутренние экзамены) по русскому языку, математике и физике</li>
               <li><strong>Тип обучения:</strong> Бюджетные места, Контрактные места (от 25 тыс. р. в год)</li>
@@ -297,7 +299,7 @@
               <li><strong>Квалификация:</strong> Бакалавр</li>
             </ul>
             <ul>
-              <h3>38.04.02 Менеджмент</h3>
+              <h3>35.04.06. Agricultural Engineering</h3>
               <li><strong>База:</strong> Диплом Бакалавра</li>
               <li><strong>Для поступления:</strong> Экзамен по математике и проф. дисциплине</li>
               <li><strong>Тип обучения:</strong> Бюджетные места</li>
