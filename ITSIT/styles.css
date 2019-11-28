@@ -378,6 +378,39 @@ margin-top: 70px;}
 #vk_groups {width: 100%;
 box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.2);}
 
+#contacts {background-color: #FAFAFA;
+box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.2);
+margin-top: 50px;
+padding-bottom: 1px;}
+
+#contacts h1 {padding-left: 15px;
+padding-top: 10px;
+padding-bottom: 10px;
+background-color: #51A66E;
+color: #F0F0F0;
+margin-bottom: 0px;}
+
+#contactsContainer {display: flex;
+justify-content: space-between;}
+
+#contactsContainer ul {padding-left: 0px;
+list-style: none;
+margin: 0px 20px 20px 20px;
+flex: 1;
+text-align: right;}
+
+#contactsSocialsContainer {display: flex;
+justify-content: space-between;
+align-items: flex-start;
+align-content: flex-end;
+flex: 2;}
+
+#contactsSocialsContainer ul {text-align: left;}
+
+#contactsSocialsContainer ul:last-child li {font-size: 1.25em;}
+
+#contactsContainer ul h2 {margin-bottom: 15px;}
+
 @-webkit-keyframes modalAnima {
   from {left: -100px; opacity:0} 
   to {left:0; opacity:1}
@@ -454,6 +487,10 @@ box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.2);}
 	.modalBody h3 {margin: 25px 0px 25px 0px;}
 	.hLine {display: block;}
 	#news h1 {margin-top: 20px;}
+	#contacts h1 {text-align: center;
+	padding-left: 0px;
+	font-size: 1.7em;}
+	#contactsContainer ul h2 {font-size: 1.3em;}
 }
 	
 @media screen and (max-width: 768px){
@@ -477,6 +514,11 @@ box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.2);}
 	.modalHead #closeModal {font-size: 1.75em;}
 	.modalContent {width: 85%;}
 	#news {width: 75%;}
+	#contactsContainer {display: block;}
+	#contactsContainer ul {text-align: center;}
+	#contactsSocialsContainer ul {text-align: left;}
+	#contactsSocialsContainer ul:last-child {text-align: right;}
+	#contactsSocialsContainer ul:last-child li {font-size: 1.35em;}
 }
 
 @media screen and (max-width: 500px){
