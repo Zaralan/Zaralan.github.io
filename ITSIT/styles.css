@@ -349,7 +349,8 @@ cursor: pointer;}
 
 .modalBody h3 {margin: 15px 0px 15px 0px;}
 
-.modalBody ul {font-size: 1.2em;}
+.modalBody ul {font-size: 1.2em;
+padding-right: 10px;}
 
 .modalBody ul li {line-height: 1.45em;
 margin-right: 10px;}
@@ -450,7 +451,7 @@ box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.2);}
 	margin: auto;}
 	.coursesContent button {display: block;
 	margin: auto;}
-	.modalBody h3 {margin:25px 0px 25px 5px;}
+	.modalBody h3 {margin: 25px 0px 25px 0px;}
 	.hLine {display: block;}
 	#news h1 {margin-top: 20px;}
 }
