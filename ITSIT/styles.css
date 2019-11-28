@@ -240,8 +240,7 @@ box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);}
 
 #courses {width: 80%;
 margin: auto;
-margin-bottom: 50px;
-padding: 20px;}
+padding: 20px 20px 0px 20px;}
 
 #coursesContainer {display: flex;
 justify-content: space-around;
@@ -280,7 +279,7 @@ flex-direction: column;
 z-index: 1;
 color: #F0F0F0;}
 
-.coursesVideoContainer .fade:hover {background-color: rgba(0,0,0,0.7);
+.coursesVideoContainer .fade:hover {background-color: rgba(0,0,0,0.6);
 color: #FFF;
 transition: color, background 0.3s ease;
 cursor: pointer;}
@@ -329,7 +328,7 @@ margin: auto;
 margin-bottom: 30px;
 padding: 0px 0px 5px 0px;
 width: 80%;
-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.2);
 -webkit-animation-name: modalAnima;
 -webkit-animation-duration: 0.4s;
 animation-name: modalAnima;
@@ -356,11 +355,27 @@ cursor: pointer;}
 margin-right: 10px;}
 
 .modalBody p {margin: 15px;
-font-size: 1.1em;}
+font-size: 1.2em;}
 
 #serviceModal, #serviceModalHeader {display: none;}
 
 #techModal, #techModalHeader {display: none;}
+
+.hLine {height: 2px;
+width: 100%;
+background-color: #041205;
+margin: 20px auto;
+display: none;}
+
+#news {width: 60%;
+margin: auto;}
+
+#news h1 {text-align: center;
+font-size: 2em;
+margin-top: 70px;}
+
+#vk_groups {width: 100%;
+box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.2);}
 
 @-webkit-keyframes modalAnima {
   from {left: -100px; opacity:0} 
@@ -401,6 +416,7 @@ font-size: 1.1em;}
 	.fade h2 {font-size: 1.7em;}
 	.modalBody ul {font-size: 1.1em;}
 	.modalBody ul li {line-height: 1.3em;}
+	.modalBody p {font-size: 1.1em;}
 }
 
 @media screen and (max-width: 992px){
@@ -434,8 +450,9 @@ font-size: 1.1em;}
 	margin: auto;}
 	.coursesContent button {display: block;
 	margin: auto;}
-	.modalBody ul {font-size: 1.1em;}
-	.modalBody h3 {margin: 25px;}
+	.modalBody h3 {margin:25px 0px 25px 5px;}
+	.hLine {display: block;}
+	#news h1 {margin-top: 20px;}
 }
 	
 @media screen and (max-width: 768px){
@@ -453,7 +470,7 @@ font-size: 1.1em;}
 	.mobileExtraButtonOn {display: inline;}
 	.mobile {display: initial;}
 	.fade h2 {font-size: 2em;}
-	.modalHead h2 {font-size: 1.5em;
+	.modalHead h2 {font-size: 1.25em;
 	text-align: left;
 	margin-left: 30px;}
 	.modalHead #closeModal {font-size: 1.75em;}
@@ -464,7 +481,11 @@ font-size: 1.1em;}
 	.aboutContent img {height: 20vw;
 	width: 20vw;}
 	.fade h2 {font-size: 1.5em;}
-	.modalHead h2 {font-size: 1.4em;}
+	.modalHead h2 {font-size: 1.1em;
+	margin-left: 10px;}
+	.modalBody h3 {font-size: 1.1em;}
+	.modalBody ul {font-size: 1em;}
+	.modalBody p {font-size: 1em;}
 }
 
 @media screen and (max-height: 450px){
