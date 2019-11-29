@@ -414,7 +414,9 @@ flex: 2;}
 
 #contactsSocialsContainer ul {text-align: left;}
 
-#contactsSocialsContainer ul:last-child li {font-size: 1.25em;}
+#contactsSocialsContainer ul:last-child li {font-size: 1.3em;}
+
+#contactsSocialsContainer ul:first-child li {margin-bottom: 4px;}
 
 #contactsContainer ul h2 {margin-bottom: 15px;}
 
