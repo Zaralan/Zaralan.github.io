@@ -218,6 +218,8 @@ height: 175px;}
 .aboutContentText h2 {margin-top: 0px;
 font-size: 1.75em;}
 
+.aboutContent h2 .fas {font-size: 0.85em;}
+
 .aboutContentText p {font-size: 1.2em;}
 
 .mobileExtraButtonOn, .mobileExtraButtonOff {display: none;
@@ -237,6 +239,11 @@ margin: -10px 0px 20px 0px;
 box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);}
 
 .mobile {display: none;}
+
+.line {height: 1px;
+width: 95%;
+background-color: #041205;
+margin-bottom: 20px;}
 
 #courses {width: 80%;
 margin: auto;
