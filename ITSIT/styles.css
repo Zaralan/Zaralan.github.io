@@ -384,6 +384,8 @@ margin: auto;}
 font-size: 2em;
 margin-top: 70px;}
 
+#vk_widget {width: 100%;}
+
 #vk_groups {width: 100%;
 box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.2);}
 

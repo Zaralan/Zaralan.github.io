@@ -64,7 +64,7 @@
   function closeTechModalHeader() {document.getElementById("techModalHeader").style.display = "none";}
 </script>
 <script src="https://kit.fontawesome.com/ed9239fef9.js" crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://vk.com/js/api/openapi.js?162"></script>
+<script type="text/javascript" src="https://vk.com/js/api/openapi.js?146"></script>
 <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })();
 </script>
 </head>
@@ -341,7 +341,9 @@
     </section>
     <section id="news">
       <h1>Our News</h1>
-      <div id="vk_groups"></div>
+      <div id="vk_widget">
+        <div id="vk_groups"></div>
+      </div>
     </section>
   </main>
   <footer id="contacts">
@@ -396,8 +398,36 @@
 	  document.getElementById("techModalHeader").style.display = "none";
 	}
 </script>
-<script type="text/javascript">
-		VK.Widgets.Group("vk_groups", {mode: 4, wide: 0, width:"auto", no_cover: 1, height: "650", color1: "F9F9F9"}, 55274015);
+<script>
+  function vkWidgetInit() {
+  var containerWidth = document.querySelector('#vk_widget').clientWidth;
+  document.querySelector('#vk_widget').innerHTML = '<div id="vk_groups"></div>';
+  VK.Widgets.Group("vk_groups", {
+    mode: 4,
+	height: "650",
+    no_cover: 1,
+    color1: 'F9F9F9',
+    width: containerWidth,
+  }, 55274015);
+}
+	document.addEventListener('DOMContentLoaded', function() {
+	  vkWidgetInit();
+	  (function() {
+		window.addEventListener("resize", resizeThrottler, false);
+		var resizeTimeout;
+		function resizeThrottler() {
+		  if (!resizeTimeout) {
+			resizeTimeout = setTimeout(function() {
+			  resizeTimeout = null;
+			  actualResizeHandler();
+			}, 66);
+		  }
+		}
+		function actualResizeHandler() {
+		  vkWidgetInit();
+		}
+  	})();
+});
 </script>
 </body>
 </html>

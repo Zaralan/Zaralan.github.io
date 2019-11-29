@@ -64,7 +64,7 @@
   function closeTechModalHeader() {document.getElementById("techModalHeader").style.display = "none";}
 </script>
 <script src="https://kit.fontawesome.com/ed9239fef9.js" crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://vk.com/js/api/openapi.js?162"></script>
+<script type="text/javascript" src="https://vk.com/js/api/openapi.js?146"></script>
 <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })();
 </script>
 </head>
@@ -144,7 +144,7 @@
         <div class="mobile">
           <p id="educationExtra" class="aboutMobileExtra">Мы проводим обучение студентов на базе высшего и среднего специального образования в очном или заочном режиме обучения по направлениям транспорта и сервиса. Бюджетная форма обучения доступна на конкурсной основе. Контракт от 25 тыс. рублей в год. Подробнее с направлениями вы можете ознакомиться в секции Кафедры.</p>
         </div>
-		<div class="line mobile"></div>
+        <div class="line mobile"></div>
         <div class="aboutContent"> <img src="./Assets/Images/Gym.jpg" alt="Студент ИТСиТ на турнире по волейболу">
           <div class="aboutContentText">
             <h2><i class="fas fa-football-ball"></i> Спорт</h2>
@@ -158,7 +158,7 @@
         <div class="mobile">
           <p id="sportsExtra" class="aboutMobileExtra">Наши студенты имеют возможность посещать тренажёрный зал, каток, бассейн и различные спортивные секции, включая дзюдо, самбо, сумо, баскетбол, волейбол, плавание, футбол, хоккей, шорт-трек, гимнастику, аквааэробику, бодибилдинг, пауэрлифтинг, гиревой спорт и армрестлинг.</p>
         </div>
-		<div class="line mobile"></div>
+        <div class="line mobile"></div>
         <div class="aboutContent"> <img src="./Assets/Images/Science.jpg" alt="Студенты на международной конференции">
           <div class="aboutContentText">
             <h2><i class="fas fa-flask"></i> Научная жизнь</h2>
@@ -172,7 +172,7 @@
         <div class="mobile">
           <p id="scienceExtra" class="aboutMobileExtra">Дважды в год – осенью и весной – в институте проводятся международные научно-практические конференции для молодых учёных и студентов. Также есть возможность участия в профессиональных конкурсах, олимпиадах и научно-практических конференциях.</p>
         </div>
-		<div class="line mobile"></div>
+        <div class="line mobile"></div>
         <div class="aboutContent"><img src="./Assets/Images/Lab.jpg" alt="Теплоход со студентами института">
           <div class="aboutContentText">
             <h2><i class="fas fa-ship"></i> Полевые лаборатории</h2>
@@ -186,7 +186,7 @@
         <div class="mobile">
           <p id="labExtra" class="aboutMobileExtra">В институте имеется лабораторный комплекс рекреационного туризма и гостеприимства, в состав которого входит теплоход ПС-172, являющийся базой для проведения учебных практик.</p>
         </div>
-		<div class="line mobile"></div>
+        <div class="line mobile"></div>
         <div class="aboutContent"><img src="./Assets/Images/Library.jpg" alt="Читальный зал ИТСиТ">
           <div class="aboutContentText">
             <h2><i class="fas fa-book"></i> Библиотека</h2>
@@ -200,7 +200,7 @@
         <div class="mobile">
           <p id="libExtra" class="aboutMobileExtra">В фонде библиотеки института представлено больше 22 тысяч книг. Список включает в себя учебные материалы, научные издания, а также художественную литературу. Студенты имеют доступ к электронным библиотечным системам и справочникам.</p>
         </div>
-		<div class="line mobile"></div>
+        <div class="line mobile"></div>
         <div class="aboutContent"><img src="./Assets/Images/AddProfAlt.jpg" alt="Студенты электрогазосварщики на практике">
           <div class="aboutContentText">
             <h2><i class="fas fa-award"></i> Дополнительно</h2>
@@ -342,7 +342,9 @@
     </section>
     <section id="news">
       <h1>Новости Института</h1>
-      <div id="vk_groups"></div>
+      <div id="vk_widget">
+        <div id="vk_groups"></div>
+      </div>
     </section>
   </main>
   <footer id="contacts">
@@ -397,8 +399,36 @@
 	  document.getElementById("techModalHeader").style.display = "none";
 	}
 </script> 
-<script type="text/javascript">
-		VK.Widgets.Group("vk_groups", {mode: 4, wide: 0, width:"auto", no_cover: 1, height: "650", color1: "F9F9F9"}, 55274015);
+<script>
+  function vkWidgetInit() {
+  var containerWidth = document.querySelector('#vk_widget').clientWidth;
+  document.querySelector('#vk_widget').innerHTML = '<div id="vk_groups"></div>';
+  VK.Widgets.Group("vk_groups", {
+    mode: 4,
+	height: "650",
+    no_cover: 1,
+    color1: 'F9F9F9',
+    width: containerWidth,
+  }, 55274015);
+}
+	document.addEventListener('DOMContentLoaded', function() {
+	  vkWidgetInit();
+	  (function() {
+		window.addEventListener("resize", resizeThrottler, false);
+		var resizeTimeout;
+		function resizeThrottler() {
+		  if (!resizeTimeout) {
+			resizeTimeout = setTimeout(function() {
+			  resizeTimeout = null;
+			  actualResizeHandler();
+			}, 66);
+		  }
+		}
+		function actualResizeHandler() {
+		  vkWidgetInit();
+		}
+  	})();
+});
 </script>
 </body>
 </html>
