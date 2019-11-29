@@ -537,7 +537,6 @@ flex: 2;}
 	.modalBody h3 {font-size: 1.1em;}
 	.modalBody ul {font-size: 1em;}
 	.modalBody p {font-size: 1em;}
-	#news {width: 80%;}
 }
 
 @media screen and (max-height: 450px){
