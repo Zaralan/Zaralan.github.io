@@ -130,6 +130,8 @@ transition: 0.25s ease;}
 top: 24%;
 left: 30px;}
 
+.sidenav ul li {display: block;}
+
 .sidenav ul li .fas {font-size: .85em;}
 
 .sidenav .closebtn {position: absolute;
@@ -539,6 +541,9 @@ flex: 2;}
 	.modalBody h3 {font-size: 1.1em;}
 	.modalBody ul {font-size: 1em;}
 	.modalBody p {font-size: 1em;}
+	#contactsContainer ul {margin: 0px 10px 20px 10px;}
+	#contactsSocialsContainer ul:first-child {margin-right: 0px;}
+	#contactsSocialsContainer ul:last-child {margin-left: 0px;}
 }
 
 @media screen and (max-height: 450px){
