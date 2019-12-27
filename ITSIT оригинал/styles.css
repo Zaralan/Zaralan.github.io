@@ -17,11 +17,11 @@ height: 100%;
 body::-webkit-scrollbar {
 	display: none;}
 
-a:link, a:visited {color: #9f003d;
+a:link, a:visited {color: #51A66E;
 text-decoration: none;
 transition: 0.25s;}
 
-a:hover, a:active {color: #9f003d;
+a:hover, a:active {color: #2EB532;
 transition: 0.25s ease;}
 
 #container {width: 100%;
@@ -161,25 +161,18 @@ font-weight: bold;}
 #mobLang a {text-align: center;
 padding: 8px 10px 10px 10px;}
 
-#logo {padding: 35px 20px 50px 0px;
-display: flex;
-justify-content: center;
-align-items: flex-end;
-flex-direction: column;}
+#logo {text-align: right;
+margin-right: 10px;}
 
-#logo img {width: 350px;
-height: 350px;
+#logo img {width: 400px;
+height: 128px;
 transition: 0.3s ease;
-display: inline-block;
-margin-right: 30px;
-order: 1;}
+margin-top: 20px;}
 
-#logo h1 {font-size: 2.4em;
+#logo h1 {margin: 0 35px 0 0;
+font-size: 2.35em;
 transition: 0.3s ease;
-display: inline-block;
-text-align: center;
-color: #03384d;
-order: 2;}
+font-weight: normal;}
 
 #hText {margin: 0 auto;
 margin-top: 30px;
@@ -456,9 +449,8 @@ flex: 2;}
 	#topNav {font-size: 1.5em;}
 	#logo h1 {font-size: 1.8em;
 	margin: 0 20px 0 0;}
-	#logo img {width: 275px;
-	height: 275px;
-	margin: 0px 35px 5px 0px;}
+	#logo img {width: 300px;
+	height: 96px;}
 	#hText {width: 70%}
 	#hText h2 {font-size: 2em;}
 	#hText p {font-size: 1.2em;
@@ -517,8 +509,8 @@ flex: 2;}
 }
 	
 @media screen and (max-width: 768px){
-	#logo img {width: 400px;
-	height: 400px;}
+	#logo img {width: 200px;
+	height: 64px;}
 	#logo h1 {font-size: 1.2em;
 	margin: 0 15px 0 0;}
 	#hText {width: 100%;
