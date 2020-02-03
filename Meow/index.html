@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Мур</title>
+    <script src="https://kit.fontawesome.com/ed9239fef9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Кесулькен! <br>Я тебя люблю <i class="fas fa-heart"></i></h1>
+        <button class="btn" id="btn">Нажми что бы <br> увидеть мяу</button>
+    </div>
+    <div id="popUp" class="container popUp scale-in-center">
+        <i id="closeBtn" class="far fa-times-circle"></i>
+        <img src="https://sun9-20.userapi.com/c854020/v854020441/1eb87b/nIF2kDe32J0.jpg" alt="Me + You" class="fade-in">
+    </div>
+
+    <script>
+        var modal = document.getElementById("popUp");
+        var modalOpn = document.getElementById("btn");
+        var modalExt = document.getElementById("closeBtn");
+
+        modalOpn.addEventListener("click", openModal);
+
+        modalExt.addEventListener("click", closeModal);
+
+        function openModal() { modal.style.display = "flex"; }
+
+        function closeModal() { modal.style.display = "none"; }
+    </script>
+</body>
+
+</html>
