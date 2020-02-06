@@ -8,6 +8,21 @@
     <link rel="stylesheet" href="./styles.css">
     <title>Мур</title>
     <script src="https://kit.fontawesome.com/ed9239fef9.js" crossorigin="anonymous"></script>
+    <script>
+        /*    var Kisses = prompt("Введите число цомов которое хотите получить :3");
+            if (Kisses == 1) {
+                alert("Вот ваш цом :3");
+            } else if (Kisses > 0) {
+                for (let i = 1; i <= Kisses; i++) {
+                    alert("Ваш цом номер " + i);
+                    if (i === Kisses) {
+                        alert("Вы получили все свои цомы :3");
+                    };
+                };
+            } else {
+                alert("Вы что, не хотите получать цомы? Жаль... Обновите страницу если передумаете :(");
+            };*/
+    </script>
 </head>
 
 <body>
@@ -15,19 +30,20 @@
         <h1>Кесулькен! <br>Я тебя люблю <i class="fas fa-heart"></i></h1>
         <button class="btn" id="btn">Нажми что бы <br> увидеть мяу</button>
     </div>
-    <div id="popUp" class="container popUp scale-in-center">
-        <i id="closeBtn" class="far fa-times-circle"></i>
-        <img src="https://sun9-20.userapi.com/c854020/v854020441/1eb87b/nIF2kDe32J0.jpg" alt="Me + You" class="fade-in">
+    <div id="popUp" class="container popUp">
+        <i class="far fa-times-circle closeBtn"></i>
+        <img src="./meow.jpg" alt="Me + You" class="bounce-in-fwd closeBtn">
     </div>
 
     <script>
         var modal = document.getElementById("popUp");
         var modalOpn = document.getElementById("btn");
-        var modalExt = document.getElementById("closeBtn");
+        var modalExt = document.getElementsByClassName("closeBtn");
 
         modalOpn.addEventListener("click", openModal);
 
-        modalExt.addEventListener("click", closeModal);
+        modalExt[0].addEventListener("click", closeModal);
+        modalExt[1].addEventListener("click", closeModal);
 
         function openModal() { modal.style.display = "flex"; }
 
