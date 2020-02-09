@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    background: #eee;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.container h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.container .carousel {
+    background: #fcfcfc;
+    max-width: 600px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.carousel .header {
+    border-radius: 5px 5px 0px 0px;
+    background: rgb(169, 185, 62);
+    padding: 10px;
+}
+
+.carousel .header p {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px 10px;
+    font-weight: bold;
+    color: #fcfcfc;
+    font-size: 1.2em;
+}
+
+.carousel .header p:last-child {
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+.carousel .body {
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel .carouselContent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.carousel .carouselContent img {
+    width: 50vw;
+    max-width: 400px;
+    margin-bottom: 15px;
+}
+
+.carouselContent .fas {
+    font-size: 2.5em;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 0px 10px;
+    transition: 0.3s ease;
+}
+
+.carouselContent .fas:hover, .carouselContent .fas:active {
+    color: rgb(169, 185, 62);
+    transition: color 0.3s ease;
+}
+
+.carousel .body .dots {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.carousel .body .dot {
+    height: 17px;
+    width: 17px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0px 7px 7px 7px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.carousel .body .dot:hover, .carousel .body .dot:active{
+    background: rgb(169, 185, 62);
+    transition: 0.5s ease;
+}
+
+.carousel .body .activeDot {
+    background: rgb(169, 185, 62);
+    transition: 0.5s ease;
+}
+
+.carousel .footer p {
+    text-align: center;
+    font-size: 0.75em;
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 5px;
+}
