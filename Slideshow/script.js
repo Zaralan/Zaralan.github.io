@@ -58,7 +58,7 @@ function prevImage() {
         dots[0].setAttribute('class', 'dot');
     } else {
         dots[i + 1].setAttribute('class', 'dot');
-    }
+    };
 };
 
 //functions for dots click
