@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>123</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            width: 30vw;
+            background-color: cyan;
+            position: fixed;
+            left: 35vw;
+            padding: 0;
+        }
+
+        ul>li>a {
+            background: white;
+            color: black;
+            text-decoration: none;
+            padding: 5px;
+            font-size: 1.5em;
+        }
+
+        ul>li>a:hover {
+            background: grey;
+        }
+
+        ul>li>a:active {
+            background: darkgrey;
+        }
+
+        .box {
+            height: 100vh;
+            background-color: #CECECE;
+            border-bottom: 1px solid black;
+        }
+
+        .active {
+            background: darkgrey;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#box1" class="link">box1</a></li>
+            <li><a href="#box2" class="link">box2</a></li>
+            <li><a href="#box3" class="link">box3</a></li>
+        </ul>
+    </nav>
+    <div id="box1" class="box">box1</div>
+    <div id="box2" class="box">box2</div>
+    <div id="box3" class="box">box3</div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        /*$(window).scroll(function () {
+            var scroll = $(window).scrollTop() + 1,
+                box1Position = $('#box1').offset().top,
+                box2Position = $('#box2').offset().top,
+                box3Position = $('#box3').offset().top;
+            if (scroll >= box1Position) {
+                $('a').removeClass('active');
+                $('a[href^="#box1"]').addClass('active');
+            }
+            if (scroll >= box2Position) {
+                $('a').removeClass('active');
+                $('a[href^="#box2"]').addClass('active');
+            }
+            if (scroll >= box3Position) {
+                $('a').removeClass('active');
+                $('a[href^="#box3"]').addClass('active');
+            }
+        });*/
+        window.onscroll = function () {
+            if (document.documentElement.scrollTop + 50 >= document.getElementById('box1').offsetTop) {
+                document.getElementsByClassName('link')[0].setAttribute('class', 'link active');
+                document.getElementsByClassName('link')[1].setAttribute('class', 'link');
+                document.getElementsByClassName('link')[2].setAttribute('class', 'link');
+            }
+            if (document.documentElement.scrollTop + 50 >= document.getElementById('box2').offsetTop) {
+                document.getElementsByClassName('link')[1].setAttribute('class', 'link active');
+                document.getElementsByClassName('link')[0].setAttribute('class', 'link');
+                document.getElementsByClassName('link')[2].setAttribute('class', 'link');
+            }
+            if (document.documentElement.scrollTop + 50 >= document.getElementById('box3').offsetTop) {
+                document.getElementsByClassName('link')[2].setAttribute('class', 'link active');
+                document.getElementsByClassName('link')[1].setAttribute('class', 'link');
+                document.getElementsByClassName('link')[0].setAttribute('class', 'link');
+            }
+        }
+    </script>
+</body>
+
+</html>
