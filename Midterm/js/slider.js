@@ -1,7 +1,7 @@
 function mySlider() {
-    var nextButton = document.querySelector('#explore .right'),
-        prevButton = document.querySelector('#explore .left'),
-        slider = document.querySelector('#explore .slider'),
+    var nextButton = document.querySelector('#feel .right'),
+        prevButton = document.querySelector('#feel .left'),
+        slider = document.querySelector('#feel .slider'),
         translate = 590,
         direction = false;
 
@@ -34,5 +34,3 @@ function mySlider() {
         }
     });
 }
-
-mySlider();
