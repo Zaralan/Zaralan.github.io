@@ -2,7 +2,7 @@ function mySlider() {
     var nextButton = document.querySelector('#feel .right'),
         prevButton = document.querySelector('#feel .left'),
         slider = document.querySelector('#feel .slider'),
-        translate = 590,
+        translate = document.querySelectorAll('#feel .slider .slider-content')[0].offsetWidth + 20,
         direction = false;
 
     nextButton.addEventListener('click', function () {
