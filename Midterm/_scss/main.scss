@@ -54,7 +54,7 @@ a {
       width: em(51);
     }
 
-    > h1 {
+    h1 {
       font-size: em(44);
       margin: 0px 0px 0px 5px;
       line-height: 1em;
@@ -63,7 +63,7 @@ a {
     }
   }
 
-  > nav > ul {
+  nav ul {
     display: flex;
     flex-wrap: wrap;
     padding: 0;
@@ -72,15 +72,15 @@ a {
     justify-content: space-between;
     width: 894px;
 
-    > li > a {
+    li a {
       font-size: em(40);
       font-weight: 600;
       transition: color 0.2s ease;
     }
-    > li > a:hover {
+    li a:hover {
       color: lighten($primary, $amount: 5%);
     }
-    > li:last-child > a {
+    li:last-child a {
       padding-right: 50px;
     }
     .active-link {
@@ -634,6 +634,72 @@ footer {
 
     ul:last-of-type {
       display: none;
+    }
+  }
+
+  #nav {
+    #logo {
+      margin: 5px 0;
+
+      #logoImg {
+        height: em(58.6);
+        width: em(42);
+      }
+      h1 {
+        font-size: em(34);
+      }
+    }
+
+    nav {
+      ul {
+        width: auto;
+        justify-content: flex-end;
+
+        li:first-of-type {
+          a {
+            padding: 0;
+          }
+        }
+
+        li:nth-of-type(2) {
+          order: 3;
+          display: none;
+        }
+
+        li:last-of-type {
+          order: 2;
+          margin-left: 50px;
+
+          a {
+            padding: 0;
+          }
+        }
+
+        li {
+          width: 160px;
+          height: 42px;
+          background: $button-gradient;
+          box-shadow: 0px 4px 0px #1c3249;
+          border-radius: 50px;
+          border: none;
+          color: white;
+          cursor: pointer;
+          display: flex;
+          text-align: center;
+
+          .active-link {
+            color: white;
+          }
+
+          a {
+            color: inherit;
+            font-size: em(24);
+            font-weight: normal;
+            align-self: center;
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }
