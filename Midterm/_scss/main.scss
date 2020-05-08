@@ -95,6 +95,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  width: 100%;
   display: grid;
   grid-template-columns: auto 1000px;
   grid-template-rows: auto auto;
@@ -728,7 +729,9 @@ footer {
   header {
     align-content: initial;
     height: 800px;
-    grid-template-columns: 0px auto;
+    width: 100%;
+    margin: auto;
+    grid-template-columns: 0 100%;
     grid-template-rows: auto auto;
 
     .text-content:before,
@@ -862,5 +865,9 @@ footer {
         }
       }
     }
+  }
+
+  #download {
+    display: none;
   }
 }
