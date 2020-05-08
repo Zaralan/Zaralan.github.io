@@ -9,7 +9,7 @@ $button-gradient--active: linear-gradient(105.72deg, #374c86 -10.91%, #1c3249 26
   @return $pixels/16 * 1em;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap");
 
 * {
   box-sizing: border-box;
@@ -593,42 +593,54 @@ footer {
     text-align: center;
   }
 
+  #google_translate_element {
+    left: initial;
+    right: 0;
+    bottom: 150px;
+  }
+
   footer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 150px;
     z-index: 2;
     justify-content: space-between;
     padding: 0px 10px 40px 50px;
 
     ul li {
       display: inline;
-      font-size: 30px;
+      font-size: 20px;
     }
 
     ul:first-of-type {
       order: 2;
-      transform: translateX(100px);
+      transform: translateX(0);
+      margin: 0;
 
       h2 {
-        transform: translateX(-80px);
+        transform: translateX(-25px);
+        font-size: 1.5em;
       }
 
       li {
-        padding: 0 40px;
+        padding: 0 30px;
       }
     }
 
     ul:nth-of-type(2) {
-      transform: translateX(10px);
+      transform: translateX(50px);
+      margin: 0;
+      order: 1;
 
       h2 {
-        transform: translateX(-35px);
+        transform: translateX(-10px);
+        font-size: 1.5em;
       }
 
       li {
-        padding: 0 45px;
+        padding: 0 30px;
       }
     }
 
@@ -638,9 +650,8 @@ footer {
   }
 
   #nav {
+    padding: 10px 25px 10px 25px;
     #logo {
-      margin: 5px 0;
-
       #logoImg {
         height: em(58.6);
         width: em(42);
@@ -653,7 +664,6 @@ footer {
     nav {
       ul {
         width: auto;
-        justify-content: flex-end;
 
         li:first-of-type {
           a {
@@ -668,7 +678,7 @@ footer {
 
         li:last-of-type {
           order: 2;
-          margin-left: 50px;
+          margin-left: 10px;
 
           a {
             padding: 0;
@@ -676,8 +686,8 @@ footer {
         }
 
         li {
-          width: 160px;
-          height: 42px;
+          width: 156px;
+          height: 39px;
           background: $button-gradient;
           box-shadow: 0px 4px 0px #1c3249;
           border-radius: 50px;
@@ -693,11 +703,162 @@ footer {
 
           a {
             color: inherit;
-            font-size: em(24);
+            font-size: em(20);
             font-weight: normal;
             align-self: center;
             width: 100%;
+            font-weight: 600;
           }
+
+          a:hover {
+            color: inherit;
+          }
+        }
+
+        li:hover {
+          background: $button-gradient--hover;
+        }
+        li:active {
+          background: $button-gradient--active;
+        }
+      }
+    }
+  }
+
+  header {
+    align-content: initial;
+    height: 800px;
+    grid-template-columns: 0px auto;
+    grid-template-rows: auto auto;
+
+    .text-content:before,
+    .text-content:after {
+      display: none;
+    }
+
+    .text-content {
+      margin: 100px 50px 0 50px;
+      align-self: center;
+      justify-self: right;
+      background: rgba(255, 255, 255, 0.75);
+      max-width: 540px;
+    }
+
+    button {
+      margin: 0 auto;
+      align-self: center;
+    }
+  }
+
+  #feel {
+    width: 85%;
+
+    h2 {
+      font-size: em(40);
+      width: 100%;
+      max-width: 680px;
+      margin: 33px auto 20px auto;
+    }
+
+    p {
+      font-size: em(22);
+      width: 100%;
+      max-width: 680px;
+      margin: auto;
+    }
+
+    .slider-border {
+      display: block;
+      min-width: auto;
+      margin: auto;
+
+      .slider-hider {
+        overflow: initial;
+        margin: auto;
+
+        .slider {
+          margin-top: 50px;
+          display: block;
+          padding: 0;
+          margin-left: auto;
+          margin-right: auto;
+
+          .slider-content {
+            margin: 0 auto 50px auto;
+            width: 100%;
+            min-width: auto;
+            max-width: 680px;
+            justify-content: space-between;
+
+            img {
+              opacity: 50%;
+              margin-left: 50px;
+              align-self: center;
+              order: 1;
+              min-width: 180px;
+              min-height: 180px;
+            }
+
+            .slider-content--text {
+              margin: 0;
+              width: 100%;
+              max-width: 380px;
+
+              p {
+                width: 100%;
+                max-width: 380px;
+              }
+            }
+          }
+          .slider-content:nth-of-type(2) {
+            img {
+              order: 0;
+              margin-left: 0;
+              margin-right: 50px;
+            }
+          }
+        }
+      }
+    }
+
+    .slider-border::before,
+    .slider-border::after {
+      display: none;
+    }
+
+    i {
+      display: none;
+    }
+  }
+
+  #explore {
+    padding: 0;
+    width: 80%;
+
+    h2 {
+      font-size: em(54);
+      margin-bottom: 50px;
+    }
+
+    .wrapper {
+      display: block;
+
+      .section {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto 65px auto;
+
+        img {
+          width: 100%;
+          max-width: 500px;
+        }
+
+        h3 {
+          font-size: em(36);
+        }
+
+        p {
+          font-size: em(24);
         }
       }
     }
