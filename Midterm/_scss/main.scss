@@ -24,6 +24,10 @@ body {
   scroll-behavior: smooth;
 }
 
+#mobileMenu {
+  display: none;
+}
+
 .text-mob {
   display: none;
 }
@@ -61,6 +65,16 @@ a {
       font-weight: bold;
       align-self: center;
     }
+  }
+
+  nav .mobOpen,
+  nav .mobClose {
+    display: none;
+    font-size: 50px;
+    color: $primary;
+    margin-top: 6px;
+    text-shadow: 0px 2px 0px #1c3249;
+    cursor: pointer;
   }
 
   nav ul {
@@ -930,6 +944,111 @@ footer {
 
       .info {
         order: 1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  header #nav {
+    z-index: 5;
+    nav {
+      .mobOpen {
+        display: block;
+      }
+      ul {
+        display: none;
+      }
+    }
+  }
+
+  header {
+    height: auto;
+
+    .text-content {
+      margin: 150px 0 0 0;
+    }
+
+    button {
+      margin: 50px auto;
+    }
+  }
+
+  #mobileMenu {
+    display: none;
+    background: rgba(black, $alpha: 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 100vw;
+    height: 100vh;
+
+    ul {
+      z-index: 5;
+      align-self: center;
+      justify-self: center;
+      margin: auto;
+      padding: 0;
+      list-style: none;
+
+      li {
+        margin: 30px 0;
+        a {
+          color: white;
+          font-size: em(50);
+        }
+      }
+    }
+  }
+
+  footer {
+    z-index: 5;
+    ul:first-of-type {
+      transform: translateX(60px);
+
+      h2 {
+        width: 120px;
+        transform: translateX(30px);
+        margin-bottom: 10px;
+        margin-top: 10px;
+        text-align: end;
+      }
+    }
+
+    ul:nth-of-type(2) {
+      transform: translateX(20px);
+
+      h2 {
+        transform: translateX(-10px);
+        width: 100px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  #feel {
+    .slider-border {
+      .slider-hider {
+        .slider {
+          .slider-content {
+            display: block;
+            img {
+              float: right;
+              margin: auto;
+              height: 100px;
+              width: 100px;
+              min-height: 100px;
+              min-width: 100px;
+              max-width: 100px;
+              max-height: 100px;
+            }
+          }
+          .slider-content:nth-of-type(2) img {
+            margin: auto;
+          }
+        }
       }
     }
   }
