@@ -70,9 +70,9 @@ a {
   nav .mobOpen,
   nav .mobClose {
     display: none;
-    font-size: 50px;
+    font-size: em(40);
     color: $primary;
-    margin-top: 6px;
+    margin-top: 10px;
     text-shadow: 0px 2px 0px #1c3249;
     cursor: pointer;
   }
@@ -950,27 +950,56 @@ footer {
 }
 
 @media screen and (max-width: 550px) {
-  header #nav {
-    z-index: 5;
-    nav {
-      .mobOpen {
-        display: block;
-      }
-      ul {
-        display: none;
-      }
-    }
-  }
-
   header {
     height: auto;
+    background-position: -50px;
+
+    #nav {
+      z-index: 5;
+      padding: 10px 15px;
+
+      #logo {
+        h1 {
+          font-size: em(30);
+        }
+
+        #logoImg {
+          height: 49px;
+          width: 35px;
+        }
+      }
+
+      nav {
+        .mobOpen {
+          display: block;
+        }
+        ul {
+          display: none;
+        }
+      }
+    }
 
     .text-content {
       margin: 150px 0 0 0;
+
+      h2 {
+        font-size: em(28);
+      }
+
+      p {
+        font-size: em(16);
+      }
     }
 
     button {
       margin: 50px auto;
+      width: 157px;
+      height: 40px;
+
+      a {
+        font-size: 18px;
+        line-height: 40px;
+      }
     }
   }
 
@@ -982,48 +1011,56 @@ footer {
     left: 0;
     z-index: 4;
     width: 100vw;
-    height: 100vh;
+    height: 95vh;
 
     ul {
       z-index: 5;
       align-self: center;
-      justify-self: center;
       margin: auto;
       padding: 0;
       list-style: none;
 
       li {
-        margin: 30px 0;
+        margin: 0 0 30px 0;
         a {
           color: white;
-          font-size: em(50);
+          font-size: em(25);
+          font-weight: 600;
         }
       }
     }
   }
 
+  #google_translate_element {
+    bottom: 47.5px;
+    right: -12px;
+    transform: scale(0.85);
+  }
+
   footer {
     z-index: 5;
+    height: 50px;
+    padding: 0;
+
+    ul {
+      li {
+        font-size: 15px;
+      }
+    }
+
     ul:first-of-type {
-      transform: translateX(60px);
+      transform: translate(50px, 7.5px);
 
       h2 {
-        width: 120px;
-        transform: translateX(30px);
-        margin-bottom: 10px;
-        margin-top: 10px;
-        text-align: end;
+        display: none;
       }
     }
 
     ul:nth-of-type(2) {
-      transform: translateX(20px);
+      transform: translate(60px, 7.5px);
 
       h2 {
-        transform: translateX(-10px);
-        width: 100px;
-        margin-bottom: 10px;
-        margin-top: 10px;
+        display: none;
       }
     }
   }
